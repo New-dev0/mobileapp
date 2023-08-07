@@ -87,7 +87,25 @@
 	<script src="c2runtime.js"></script>
 
     <script>
-	        window.onload = () => console.log(localStorage.getItem("SirBottomtight"));
+	        function getScore () {
+		let local = localStorage.getItem("SirBottomtight");
+		if (local) {
+			return JSON.parse(local)['highscore'];
+		};
+	        return "0";
+		};
+	        window.onload = () => {
+		var local = getScore();
+     	    function onUpdate() {
+		let score = getScore(key);
+		if (score !== local) {
+		    local = score;
+		    console.log(local);
+		};
+		setTimeout(onUpdate, 200);
+	    };
+	    setTimeout(onUpdate, 200);
+		};
 		// Start the Construct 2 project running on window load.
 		jQuery(document).ready(function ()
 		{			
