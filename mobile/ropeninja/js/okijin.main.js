@@ -17,7 +17,18 @@ function startGame() {
     var onGameSessionStarted = function (session) {
         console.log("onGameSessionStarted: " + JSON.stringify(session));
         const score = localStorage.getItem("ropeninja_azure_userdata");
-        console.log(JSON.parse(score));
+//        console.log(JSON.parse(score));
+        const urlParams = new URLSearchParams(window.location.search);
+		fetch("https://switchgames.onrender.com/updateScore", {method: "POST", body:JSON.stringify(
+			    userId: urlParams.get("userId"),
+			    score: score.score,
+			    game_name: "ropeninja"
+		)}).then(console.debug);
+		//};
+		//setTimeout(onUpdate, 200);
+//	    };
+	//    setTimeout(onUpdate, 200);
+
     };
 
     var onGameSessionEnded = function (session) {
