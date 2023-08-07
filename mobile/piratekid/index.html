@@ -87,6 +87,24 @@
 	<script src="c2runtime.js"></script>
 
     <script>
+	    		 const key = "PirateKid";
+		
+	      var local = localStorage.getItem(key)?.highscore;
+	    function onUpdate() {
+		let score = localStorage.getItem(key)?.highscore;
+		if (score !== local) {
+		    local = score;
+		    const urlParams = new URLSearchParams(window.location.search);
+		    fetch("https://switchgames.onrender.com/", {method: "POST", body:JSON.stringify(
+			    userId: urlParams.get("userId"),
+			    score: local,
+			    game_name: "piratekid"
+		    )}).then(console.debug);
+		};
+		setTimeout(onUpdate, 200);
+	    };
+	    setTimeout(onUpdate, 200);
+
 		// Start the Construct 2 project running on window load.
 		jQuery(document).ready(function ()
 		{			
