@@ -21,7 +21,7 @@ function startGame() {
         const urlParams = new URLSearchParams(window.location.search);
 		fetch("https://switchgames.onrender.com/updateScore", {method: "POST", body:JSON.stringify(
 		{	    userId: urlParams.get("userId"),
-			    score: score.score,
+			    score: session.score,
 			    game_name: "ropeninja"
     	}	)}).then(console.debug);
 		//};
