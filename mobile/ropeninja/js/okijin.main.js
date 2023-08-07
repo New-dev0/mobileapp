@@ -16,9 +16,12 @@ function startGame() {
 
     var onGameSessionStarted = function (session) {
         console.log("onGameSessionStarted: " + JSON.stringify(session));
+        const score = localStorage.getItem("ropeninja_azure_userdata");
+        console.log(JSON.parse(score));
     };
 
     var onGameSessionEnded = function (session) {
+        console.log(session.score)
         console.log("onGameSessionEnded: " + JSON.stringify(session));
         if (OkijinAPI) {
             OkijinAPI.showInterstitial();
