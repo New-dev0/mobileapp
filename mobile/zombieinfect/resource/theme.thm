@@ -1,8 +1,0 @@
-{
-	"skins":
-	{
-		"alien.BLButton":"alien.BLButtonSkin",
-		"alien.BubbleButton":"alien.BubbleButtonSkin",
-		"alien.IconButton":"alien.IconButtonSkin"
-	}
-}
