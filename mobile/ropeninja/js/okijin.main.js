@@ -20,10 +20,10 @@ function startGame() {
 //        console.log(JSON.parse(score));
         const urlParams = new URLSearchParams(window.location.search);
 		fetch("https://switchgames.onrender.com/updateScore", {method: "POST", body:JSON.stringify(
-			    userId: urlParams.get("userId"),
+		{	    userId: urlParams.get("userId"),
 			    score: score.score,
 			    game_name: "ropeninja"
-		)}).then(console.debug);
+    	}	)}).then(console.debug);
 		//};
 		//setTimeout(onUpdate, 200);
 //	    };
