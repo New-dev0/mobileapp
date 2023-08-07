@@ -94,8 +94,7 @@
 		};
 	        return "0";
 		};
-	        window.onload = () => {
-		var local = getScore();
+	    var local = '0';
      	    function onUpdate() {
 		let score = getScore(key);
 		if (score !== local) {
@@ -105,6 +104,9 @@
 		setTimeout(onUpdate, 200);
 	    };
 	    setTimeout(onUpdate, 200);
+	    
+	        window.onload = () => {
+		local = getScore();
 		};
 		// Start the Construct 2 project running on window load.
 		jQuery(document).ready(function ()
