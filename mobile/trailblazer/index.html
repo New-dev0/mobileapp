@@ -25,7 +25,30 @@
 
         <!--<link rel="stylesheet" href="assets/fonts/FredFredburgerAra-Regular.css">
         <link rel="stylesheet" href="assets/fonts/FredFredburgerAraHeadBlack-Regular.css">-->
-
+        <script>
+            const key = "powerpuffgirls_trail_blazer_0.0.1";
+             function getScore () {
+		let local = localStorage.getItem(key);
+		if (local) {
+			return JSON.parse(local)['bestScore'];
+		};
+	        return "0";
+		};
+	    var local = '0';
+     	    function onUpdate() {
+		let score = getScore();
+		if (score !== local) {
+		    local = score;
+		    console.log(local);
+		};
+		setTimeout(onUpdate, 200);
+	    };
+	    setTimeout(onUpdate, 200);
+	    
+	        window.onload = () => {
+		local = getScore();
+		};
+        </script>
         <style>
             body {
                 margin: 0;
