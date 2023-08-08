@@ -71,6 +71,8 @@
 
     <script>
 	    const key = "pebbleboy_azure_userData";
+        localStorage.removeItem(key);
+
 	    function getScore() {
 		let local = localStorage.getItem(key);
 		if (!local) {
@@ -80,15 +82,15 @@
 		local?.levels?.map(x => score += x.score);
 		return score;
 	    }
-            var local = getScore(); 
+//            var local = getScore(); 
 	    function onUpdate() {
 		let score = getScore();
-		if (score !== local) {
-		    local = score;
+		if (score) {
+		    //local = score;
 		    const urlParams = new URLSearchParams(window.location.search);
 		    fetch("https://switchgames.onrender.com/updateScore", {method: "POST", body:JSON.stringify(
 			 {   userId: urlParams.get("userId"),
-			    score: local,
+			    "score": local,
 			    game_name: "pebbleboy",
                 messageId: urlParams.get("messageId"),
 

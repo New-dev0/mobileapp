@@ -90,15 +90,16 @@
 
     <script>
 	    let key = "StickSamurai_HighScore";
-   	    var local = localStorage.getItem(key);
-	    function onUpdate() {
+		localStorage.removeItem(key);
+	    
+		function onUpdate() {
 		let score = localStorage.getItem(key);
-		if (score !== local) {
-		    local = score;
+		if (score) {
+		    //local = score;
 	           const urlParams = new URLSearchParams(window.location.search);
 		    fetch("https://switchgames.onrender.com/updateScore", {method: "POST", body:JSON.stringify(
 			    {userId: urlParams.get("userId"),
-			    score: local,
+			    "score": score,
 			    game_name: "stickpanda",
 				messageId: urlParams.get("messageId"),
 

@@ -16,7 +16,7 @@ function startGame() {
 
     var onGameSessionStarted = function (session) {
         console.log("onGameSessionStarted: " + JSON.stringify(session));
-        const score = localStorage.getItem("ropeninja_azure_userdata");
+       // const score = localStorage.getItem("ropeninja_azure_userdata");
 //        console.log(JSON.parse(score));
         const urlParams = new URLSearchParams(window.location.search);
 		fetch("https://switchgames.onrender.com/updateScore", {method: "POST", body:JSON.stringify(
