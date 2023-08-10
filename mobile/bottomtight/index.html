@@ -117,7 +117,7 @@
 		//		var local = '0';
 		function onUpdate() {
 			let score = getScore();
-			if (parseInt(score) !== parseInt(lscore)) {
+			if (parseInt(score) > parseInt(lscore)) {
 				lscore = score;
 
 				fetch("https://switchgames.onrender.com/updateScore", {
