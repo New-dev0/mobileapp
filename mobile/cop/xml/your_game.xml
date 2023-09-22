@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<your_game>
+
+	<!--Facebook-->
+	
+	<id>YOUR ID APP FACEBOOK</id>
+	<!--EXAMPLE: 637119926359209 -->
+	
+	<text_record_01>YOUR MESSAGE OR GAME NAME</text_record_01>
+	<!--EXAMPLE: My record is -->
+	
+	<text_record_02>YOUR MESSAGE OR GAME NAME</text_record_02>
+	<!--EXAMPLE: . FlapCat Copters -->
+		
+	<link>YOUR LINK GAME</link>
+	<!--EXAMPLE: http://codecanyon.net/user/wall-e/portfolio -->
+		
+	<caption>YOUR CAPTION</caption>
+	<!--EXAMPLE: That cat is crazy! Very fun! -->
+	
+	<picture>YOUR URL PICTURE</picture>
+	<!--EXAMPLE: http://filippileonardo.com/_temp/envato/flapcat_copters_01/fcc_share_01.png -->
+	
+	<description>YOUR DESCRIPTION</description>
+	<!--EXAMPLE: The increased difficulty! Now only the best succeed! Join this amazing new adventure with FlapCat, this new game based on the successful Swing Copters. Watch out! Very addictive game! 
+
+FlapCat Copters is a very difficult game, with graphics steampunk style, and an infinite level! What is his record? -->
+
+	<!--Twitter-->
+	
+	<text_record_twitter_01>YOUR MESSAGE</text_record_twitter_01>
+	<!--EXAMPLE: My record is -->
+
+	<text_record_twitter_02>YOUR MESSAGE</text_record_twitter_02>
+	<!--EXAMPLE: . Play now FlapCat Copters! http://codecanyon.net/user/wall-e/portfolio -->
+	
+</your_game>
