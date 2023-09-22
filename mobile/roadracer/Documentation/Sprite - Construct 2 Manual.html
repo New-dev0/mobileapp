@@ -1,0 +1,455 @@
+
+
+<!DOCTYPE html>
+<html lang="en" runat="server" >
+    
+<head><meta charset="UTF-8" /><link rel="shortcut icon" href="//static4.scirra.net/images/fresh/scirra-favicon-02.ico" /><link rel="apple-touch-icon" href="//static4.scirra.net/images/fresh/scirra-favicon-57px-01.png" /><link href="//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css" /><link href="//fonts.googleapis.com/css?family=Sansita+One" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="//static3.scirra.net/css/fresh.css?v=167" />
+    
+    
+    <title>Sprite - Construct 2 Manual</title>
+    <link href="https://www.scirra.com/manual/115/sprite" rel="canonical" />
+    <script src='//static2.scirra.net/js/shcore.js?v=20' type='text/javascript'></script>
+    <script src='//static1.scirra.net/js/shbrushjscript.js?v=20' type='text/javascript'></script>
+    <link rel="stylesheet" href="//static1.scirra.net/css/shcore.css?v=167" />
+    <link rel="stylesheet" href="//static3.scirra.net/css/shthemedefault.css?v=167" />
+    <link rel="stylesheet" href="//static4.scirra.net/css/freshmanual.css?v=167" />
+<meta name="viewport" content="width=1024" /><meta name="theme-color" content="#06c3ab" /><title>
+
+</title></head>
+<body>
+    
+    <form method="post" action="sprite?ID=115&amp;&amp;bodypage=1" id="Form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F75732CA" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="tBHaYxMkNQtGKxnjAZ2d9RhoSzOyAiSJwqdLxY+v29AZdVLjOAHIm4w9qVXZxou2bvB20IMG/8Svusm183LDGbRzZumBYPpHpwc07OuOPOQHRMap" />
+</div>
+  
+    <header>
+        
+    
+
+
+<div class="menu-wrapper">
+    <div class="content-wrap">
+        
+            <a class="topmenu-logo" href="https://www.scirra.com"><img src="//static4.scirra.net/images/fresh/scirra-logo-small-01.png" width="101" height="28" alt="Scirra Logo Small"/></a>
+        
+        <ul>
+            <li ><a href="https://www.scirra.com/construct2">Construct 2</a></li>
+            <li  class="selected"><a href="https://www.scirra.com/manual">Manual</a></li>
+            <li ><a href="https://www.scirra.com/tutorials">Tutorials</a></li><li class="split"></li>
+            <li ><a href="https://www.scirra.com/store">Store</a></li><li class="split"></li>
+            <li ><a href="https://www.scirra.com/arcade">Arcade</a></li><li class="split"></li>
+            <li ><a href="https://www.scirra.com/blog">Blog</a></li><li class="split"></li>
+            <li ><a href="https://www.scirra.com/forum">Forums</a></li><li class="split"></li>
+            <li ><a href="https://www.scirra.com/education">Education</a></li><li class="split"></li>
+        </ul>
+        
+            <div class="guest-panel">
+                <a href="https://www.scirra.com/register" title="Create a Scirra account">Register</a> or <a href="https://www.scirra.com/login" title="Login to your Scirra account">Login</a>
+            </div>
+        
+        
+        <div class="clear"></div>
+        
+        
+        
+        <div id="AlertsDropDown" class="alerts-dropdown">
+	
+            <div class="dropdown-tip"></div>
+            <div class="dropdown-links c sm">
+                <a href="https://www.scirra.com/alerts">View All Alerts</a>
+            </div>
+            <div class="hr"></div>
+
+            <div id="alerthtmlwrap"></div>
+
+        
+</div>
+
+    </div>
+</div>
+
+        <div class="content-wrap">
+
+        </div>
+    </header>
+
+    
+    <div class="clear"></div>
+    
+    
+    <div class="content-wrap">
+        
+        
+
+<div class="sub-menu">
+    <ul>
+        <li class="selected"><a href="../1/construct-2">Construct 2</a></li><li><a href="../15/sdk">SDK</a></li><li><a href="../search">Search Manual</a></li><li><a href="../../manual.zip">Download Manual</a></li>
+    </ul>
+</div>
+        
+        <div class="left-menu">
+            
+            <input name="ctl00$BodyContent$ManualSearch" type="text" id="ManualSearch" class="ManualSearchBox" />
+
+            <a class="header" href="../2/installing" title="Overview of the installation section."><span class="arr">▶</span>Installing</a><a class="header" href="../10/overview" title="Overview of Construct 2."><span class="arr">▶</span>Overview</a><a class="header" href="../36/interface" title=""><span class="arr">▶</span>Interface</a><a class="header" href="../65/project-primitives" title=""><span class="arr">▶</span>Project primitives</a><a class="header" href="../86/behavior-reference" title=""><span class="arr">▶</span>Behavior Reference</a><a class="header" href="../106/plugin-reference" title=""><span class="arr">▼</span>Plugin reference</a><ul class="submenu-level-0 "><li><a  href="../130/common-features" title=""><span class="arr">▶</span>Common features</a><ul class="submenu-level-1 hidden-menu"><li><a  href="../131/common-conditions" title="">Common conditions</a></li><li><a  href="../132/common-actions" title="">Common actions</a></li><li><a  href="../133/common-expressions" title="">Common expressions</a></li></ul></li><li><a  href="../151/9-patch" title="">9-patch</a></li><li><a  href="../184/admob" title="">AdMob</a></li><li><a  href="../107/ajax" title="">AJAX</a></li><li><a  href="../108/array" title="">Array</a></li><li><a  href="../109/audio" title="">Audio</a></li><li><a  href="../110/browser" title="">Browser</a></li><li><a  href="../111/button" title="">Button</a></li><li><a  href="../140/dictionary" title="">Dictionary</a></li><li><a  href="../112/facebook" title="">Facebook</a></li><li><a  href="../182/file-chooser" title="">File chooser</a></li><li><a  href="../149/function" title="">Function</a></li><li><a  href="../186/game-center" title="">Game Center</a></li><li><a  href="../143/gamepad" title="">Gamepad</a></li><li><a  href="../164/geolocation" title="">Geolocation</a></li><li><a  href="../175/google-play" title="">Google Play</a></li><li><a  href="../187/iad" title="">iAd</a></li><li><a  href="../173/iap" title="">IAP</a></li><li><a  href="../138/intel-agi" title="">Intel AGI</a></li><li><a  href="../113/keyboard" title="">Keyboard</a></li><li><a  href="../136/kongregate" title="">Kongregate</a></li><li><a  href="../155/list" title="">List</a></li><li><a  href="../188/local-storage" title="">Local Storage</a></li><li><a  href="../114/mouse" title="">Mouse</a></li><li><a  href="../174/multiplayer" title="">Multiplayer</a></li><li><a  href="../162/nwjs" title="">NW.js</a></li><li><a  href="../135/particles" title="">Particles</a></li><li><a  href="../180/progress-bar" title="">Progress bar</a></li><li><a  href="../185/pubcenter" title="">pubCenter</a></li><li><a  href="../159/scirra-arcade" title="">Scirra Arcade</a></li><li><a  href="../178/shadow-light" title="">Shadow light</a></li><li><a  href="../179/slider-bar" title="">Slider bar</a></li><li><a  class="selected"  href="sprite" title="">Sprite</a></li><li><a  href="../166/sprite-font" title="">Sprite font</a></li><li><a  href="../116/text" title="">Text</a></li><li><a  href="../117/textbox" title="">Textbox</a></li><li><a  href="../118/tiled-background" title="">Tiled Background</a></li><li><a  href="../172/tilemap" title="">Tilemap</a></li><li><a  href="../119/touch" title="">Touch</a></li><li><a  href="../176/twitter" title="">Twitter</a></li><li><a  href="../144/user-media" title="">User Media</a></li><li><a  href="../181/video" title="">Video</a></li><li><a  href="../153/websocket" title="">WebSocket</a></li><li><a  href="../120/webstorage" title="">WebStorage</a></li><li><a  href="../145/windows-8" title="">Windows 8</a></li><li><a  href="../139/xml" title="">XML</a></li></ul><a class="header" href="../123/system-reference" title=""><span class="arr">▶</span>System reference</a>
+
+
+            
+            <div class="c">
+                
+                <h3>Download the Manual</h3>
+                <a href="../../manual.zip" id="A1" title="Construct 2 Manual"><img style="margin-top:15px;" src="//static1.scirra.net/images/manual-cover-small.png" width="151" height="237"/></a><br/>
+                <a href="../../manual.zip" title="Construct 2 Manual">Download the Official Construct 2 Manual (2.2mb)</a>
+
+                <h3>Latest Manual Students</h3>
+                <div style="margin-top:10px;">
+                    
+                </div>
+                <div class="clear"></div>
+                <p style="font-size:12px">For people who've read <a id="StudentBadgeLink" href="../../badges/18/manual-student">at least 20 entries</a>!</p>
+            </div>
+        </div>
+        <div class="inner-content-wrap">
+            
+            <h1>Sprite</h1>
+            
+            
+
+            <p>The <strong>Sprite</strong> object is an animatable image that appears in the game.  It is one of the most important objects for most Construct 2 games.  It is used to make most visual elements in a game, such as the player, enemies, projectiles, explosions and non-tiling scenery (tiled scenery is much better done with the <a href="http://www.scirra.com/manual/118/tiled-background" rel="nofollow">Tiled Background</a> object).<p><p>If a Sprite has a single animation with a single frame, it simply shows an image without animating.  However, multiple animations can be added to Sprite objects with the <a href="http://www.scirra.com/manual/48/image-and-animations-editor" rel="nofollow">Image and Animations editor</a>.</p><p>All <a href="http://www.scirra.com/manual/71/instances" rel="nofollow">instances</a> of Sprite objects share their animations.  In other words, there is a single set of images comprising the animations which belongs to the <a href="http://www.scirra.com/manual/70/object-types" rel="nofollow">object type</a>, and these images are referenced by instances.</p><p>Sprites can have effects applied.  For more information, see <a href="http://www.scirra.com/manual/147/object-effects" rel="nofollow">Effects</a>.</p><a name="h2a0"></a><h3 id="h2ix0">Sprite properties</h3><p><strong>Animations</strong><br>Click the <em>Edit</em> link to open the <a href="http://www.scirra.com/manual/48/image-and-animations-editor" rel="nofollow">Image and Animations editor</a> for the object.  All instances of the object type share a single set of animations.</p><p><strong>Size</strong><br>Click the <em>Make 1:1</em> link to size the selection at original size (100%).  This makes the width and height of the object the same as its first animation frame image.</p><p><strong>Initial visibility</strong><br>Set whether the object is shown (visible) or hidden (invisible) when the layout starts.</p><p><strong>Initial animation</strong><br>Set the initially displaying animation. If the animation name is not found in the object, an arbitrary animation is picked as the default.</p><p><strong>Initial frame</strong><br>Set the initially displaying animation frame from the object's <em>initial animation</em>.  This is a zero-based index, so the first frame is 0.  This can be useful for storing different tiles or scenery in different animation frames of a single Sprite object type.</p><p><strong>Collisions</strong><br>Enable or disable collisions for the object.  Disabling collisions means no collision events will register for the object nor will any behaviors on the object register collisions with solids or jump-thrus.</p><a name="h2a1"></a><h3 id="h2ix1">Sprite conditions</h3><p>For conditions in common to other objects, see <a href="http://www.scirra.com/manual/131/common-conditions" rel="nofollow">Common conditions</a>.</p><p><strong>Compare frame</strong><br>Compare the current animation frame number, which is a zero-based index (the first frame is 0).</p><p><strong>Compare speed</strong><br>Compare the speed of the current animation, in animation frames per second. Animations which are playing backwards (e.g. with ping-pong animations) have a negative speed.</p><p><strong>Is flipped</strong><br><strong>Is mirrored</strong><br>True if the object has been flipped or mirrored with the <em>Set flipped</em> or <em>Set mirrored</em> actions.</p><p><strong>Is playing</strong><br>True if a given animation is currently set.  Animations are identified by their name (case insensitive).</p><p><strong>On any finished</strong><br>Triggered when any animation reaches the end.  Looping animations do not finish.</p><p><strong>On finished</strong><br>Triggered when a given animation reaches the end.  Looping animations do not finish.  Animations are identified by their name (case insensitive).</p><p><strong>On frame changed</strong><br>Triggered whenever the animation switches to another frame while the animation is playing.</p><p><strong>Collisions enabled</strong><br>True if the object's collisions are currently enabled.</p><p><strong>Is overlapping another object</strong><br><strong>Is overlapping at offset</strong><br>True if any instance is overlapping any instance of another object.  The collision polygons are taken in to account if set, as well as the object's size and rotation.  The 'offset' variant will test for an overlap at an offset from the first object.  For example, testing for an overlap at an offset of (100, 0) will temporarily move the object to the right 100 pixels, test for the overlap, then move it back again.</p><p><strong>On collision with another object</strong><br>Triggered upon the first time any instance starts overlapping any instance of another object.  The collision polygons are taken in to account if set, as well as the object's size and rotation.</p><p><strong>On image URL loaded</strong><br>Triggered when <em>Load image from URL</em> finishes downloading the image and is ready to display it.</p><a name="h2a2"></a><h3 id="h2ix2">Sprite actions</h3><p>For actions common to other objects, see <a href="http://www.scirra.com/manual/132/common-actions" rel="nofollow">Common actions</a>.</p><p><strong>Set animation</strong><br>Change the currently playing animation to another animation.  Animations are identified by their name (case insensitive).  The new animation can either play from the <em>beginning</em> or from the same frame number as the last animation was on (<em>current frame</em>).</p><p><strong>Set flipped</strong><br>Set whether the object image appears vertically flipped or normal.  This also affects image points and the collision polygon.</p><p><strong>Set mirrored</strong><br>Set whether the object image appears horizontally mirrored or normal.  This is useful for platform games.  Mirroring also affects image points and the collision polygon.</p><p><strong>Set frame</strong><br>Set the current zero-based animation frame number that is showing.  The animation will continue to play at its current speed.</p><p><strong>Set speed</strong><br>Set the playback rate of the current animation, in animation frames per second.  Instances can have different animation speeds.</p><p><strong>Start</strong><br>If the current animation is stopped, start playing the animation again.  Playback can either resume from the <em>current frame</em>, or restart from the <em>beginning</em>.</p><p><strong>Stop</strong><br>Stop the current animation from playing.  The object will be left showing the current animation frame.</p><p><strong>Spawn another object</strong><br>Create a new instance of a given object type.  The new instance is created at the current object's position and also set to the same angle.  The created object can be on any layer (chosen by its name or its zero-based number), and it can be positioned by an <a href="http://www.scirra.com/manual/63/image-points" rel="nofollow">image point</a> instead of the object's origin (chosen by its name or number).  If a Family is created, a random object type in the family is picked.</p><p><strong>Set scale</strong><br>Sets the width and height to a multiple of the object's original size, similar to zooming the object proportionally.  For example, if the object is 50x100, <em>Set scale to 2</em> will set its size to 100x200, and <em>Set scale to 0.1</em> will set its size to 5x10.</p><p><strong>Load image from URL</strong><br>Load an image from a given URL.  The current animation frame will be replaced with the image.  It is not shown until the image has finished downloading, and <em>On image URL loaded</em> triggers.  Images loaded from different domains are subject to the same cross-domain restrictions as AJAX requests - for more information see the section on cross-domain in the <a href="http://www.scirra.com/manual/107/ajax" rel="nofollow">AJAX</a> object.  Data URIs can also be passed as an image, e.g. from a canvas snapshot or webcam image.  The <em>Size</em> parameter sets whether the Sprite object will be set to the image size when it loads, or whether to keep its current size and stretch the image.</p><p><strong>Set collisions enabled</strong><br>Enable or disable collisions for the object.  Disabling collisions means no collision events will register for the object nor will any behaviors on the object register collisions with solids or jump-thrus.</p><a name="h2a3"></a><h3 id="h2ix3">Sprite expressions</h3><p>For expressions common to other objects, see <a href="http://www.scirra.com/manual/133/common-expressions" rel="nofollow">common expressions</a>.</p><p><strong>AnimationFrame</strong><br>The currently displaying zero-based animation frame number.</p><p><strong>AnimationFrameCount</strong><br>The number of animation frames in the current animation.</p><p><strong>AnimationName</strong><br>A string containing the name of the currently playing animation.</p><p><strong>AnimationSpeed</strong><br>The current playback rate of the current animation, in animation frames per second. If the animation is playing backwards (e.g. ping-pong animations), the animation speed is negative.</p><p><strong>ImageWidth</strong><br><strong>ImageHeight</strong><br>The original dimensions of the object (its current animation frame image size), in pixels.  Since objects can be stretched at runtime causing the normal <em>Width</em> and <em>Height</em> expressions to return different values, these can be used to get the original size regardless of the stretched size.</p><p><strong>ImagePointCount</strong><br>Return the number of image points on the currently displaying animation frame of the object.</p><p><strong>ImagePointX</strong><br><strong>ImagePointY</strong><br>Retrieve the position of an image point on the currently displaying animation frame of the object.  You can pass either the zero-based index of the image point, or a string of its name.</p>
+            
+
+
+            
+                <h2 class="l">Tags:</h2>
+                <ul class="tag-list">
+                    <li><a title="If you want to make games Construct 2 is the tool of choice. Create games and share them. No programming required, and games created are exported to HTML5. Make a game in Construct 2." href="../../tags/77/construct2">Construct2</a></li><li><a title="The Construct 2 manual/documentation is a valuable reference for anyone wanting to make an HTML5 game in Construct 2 the game creator. The official documentation is a comprehensive guide." href="../../tags/162/manual">Manual</a></li><li><a title="Reference refers to a resource that can be used to reference functions of Construct 2 the game making program. References are useful for quickly obtaining desired information." href="../../tags/214/reference">Reference</a></li><li><a title="A sprite is a graphic in a game that can be moved around and manipulated during the course of the game. Game makers can add as many sprites as they want into their games to make rich beautiful games." href="../../tags/182/sprite">Sprite</a></li>
+                </ul>
+            
+
+            <div class="social-footer">
+                <h3>Now get to know us a little better</h3>
+                <ul>
+                    <li><div class="g-plusone" data-size="tall" data-href="https://plus.google.com/105404553461194404336"></div></li>
+                    <li style="padding-top:15px;"><a href="https://twitter.com/Scirra" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @Scirra</a></li>
+                    <li><iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FScirraOfficial&amp;send=false&amp;layout=box_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=tahoma&amp;height=90&amp;appId=140276622761263" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:45px; height:90px;" allowTransparency="true"></iframe></li>
+                </ul>
+            </div>
+        </div>
+        
+        <a></a><a></a>
+
+        <div class="clear"></div>
+    </div>
+
+    
+    <footer>
+        <div class="footer-tear"></div>
+        <div class="footer-wrap">
+            <div class="content-wrap">
+                <ul>
+                    <li>
+                        <h2>Make Games</h2>
+                        <ul>
+                            <li><a href="../../construct2">Construct 2</a></li>
+                            <li><a href="../../construct2/releases">Download Construct 2</a></li>
+                            <li><a href="../../store/construct-2">Pricing</a></li>
+                            <li><a href="../../store/construct-2">Compare Features</a></li>
+                            <li><a href="../../manual">Online Manual</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2>Play Games</h2>
+                        <ul>
+                            <li><a href="../../arcade">Arcade</a></li>
+                            <li><a href="../../arcade/submit">Upload a Game</a></li>
+                            <li><a href="../../forum/arcade_forum48.html">Discuss</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2>Download</h2>
+                        <ul>
+                            <li><a id="LatestStableLink" href="../../construct2/releases/r212.2">Stable Release (r212.2)</a></li>
+                            <li><a id="LatestBetaLink" href="../../construct2/releases/r214">Beta Release (r214)</a></li>
+                        </ul>
+                        <div class="total-dl-wrap" title="Construct 2 has been downloaded 2,546,154 times to date"><div class="ch">2</div><div class="chs"></div><div class="ch">5</div><div class="ch">4</div><div class="ch">6</div><div class="chs"></div><div class="ch">1</div><div class="ch">5</div><div class="ch">4</div><p title="Aggregate total from Scirra.com website and large distributors">Total downloads</p></div>
+                        <h2 style="margin-top:5px;margin-bottom:0px;">Game Assets</h2>
+                        <ul>
+                            <li><a href="http://www.scirra.com/freebundle.zip" target="_blank">Free Bundle (34mb)</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2>Community</h2>
+                        <ul>
+                            <li><a href="../../blog">Blog</a></li>
+                            <li><a href="../../forum">Forums</a></li>
+                            <li><a href="../../tutorials">Tutorials</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2>About Scirra</h2>
+                        <ul>
+                            <li><a href="../../about">About Scirra</a></li>
+                            <li><a href="../../careers">Careers</a></li>
+                            <li><a href="../../contact">Contact Us</a></li>
+                            <li><a href="../../press-kit">Press Kit</a></li>
+                            <li><a href="../../people">The Team</a></li>
+                            <li><a href="../../privacy-policy">Privacy Policy</a></li>
+                            <li><a href="../../terms-and-conditions">Terms and Conditions</a></li>
+                            <li><a href="../../sitemap">Site Map</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+                
+                <div class="footer-item-wrap">
+                    <div>
+                         <a href="../../"><img src="//static3.scirra.net/images/fresh/footer-scirra-logo-01.png" width="177" height="44" alt="Scirra Logo"/></a>
+                    </div>
+                    <div class="address">
+                        Scirra Ltd, Studio 117, The Lightbulb<br />1 Filament Walk, London, SW18 4GQ
+                    </div>
+                    <div class="postcard">
+                        <a href="../../badges/45/postcard">Send us a postcard!</a>
+                    </div>
+                    <div>
+                       <ul>
+                            <li><a href="https://www.facebook.com/ScirraOfficial" target="_blank"><img src="//static2.scirra.net/images/fresh/footer-facebook-icon-01.png" width="34" height="35"/></a></li>
+                            <li><a href="https://twitter.com/scirra" target="_blank"><img src="//static1.scirra.net/images/fresh/footer-twitter-icon-01.png" width="34" height="35"/></a></li>
+                            <li><a href="https://plus.google.com/105404553461194404336/posts" target="_blank"><img src="//static2.scirra.net/images/fresh/footer-google-plus-icons-01.png" width="34" height="35"/></a></li>
+                       </ul>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="copyright">Copyright &copy; 2015 Scirra Ltd, All rights reserved.</div>
+
+            </div>
+        </div>
+    </footer>
+    
+     <script>
+         var RelPath = "../../";
+         var Domainroot = "http://www.scirra.com";
+     </script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="//static4.scirra.net/js/common.js?v=20"></script> 
+    <script type="text/javascript">
+
+        var alertsMarked = false;
+        var loadedUserDropdown = false;
+        var loadedAlertsDropdown = false;
+
+        $(document).ready(function () {
+            
+
+
+            $('#fblikeframe').html('<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.scirra.com&send=false&layout=button_count&width=150&show_faces=true&action=like&colorscheme=light&font&height=21&appId=197624256970598" height="21" scrolling="no" frameborder="0" allowTransparency="true"></iframe>');
+            !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } } (document, "script", "twitter-wjs");
+
+            $('#AlertBoxLink').click(function () {
+
+                if ($('#AlertsDropDown').is(':visible')) {
+                    hideAlertsDropDown();
+                } else {
+                    showAlertsDropDown();
+                    hideUserDropDown();
+                }
+                return false;
+            });
+
+            $('#UserDropdownLink').click(function () {
+
+                if ($('#UserDropDown').is(':visible')) {
+                    hideUserDropDown();
+                } else {
+                    showUserDropDown();
+                    hideAlertsDropDown();
+                }
+                return false;
+            });
+            function hideUserDropDown() {
+                $('#UserDropDown').slideUp('fast');
+            }
+
+            function showAlertsDropDown() {
+
+                if (!loadedAlertsDropdown) {
+
+                    $.ajax({
+                        dataType: "json",
+                        url: "https://www.scirra.com/handlers/fresh/getuseralertsdropdown.ashx",
+                        data: "",
+                        success: function (json) {
+
+                            var alertHTML = "";
+
+                            $.each(json.recentalerts, function (i, item) {
+                                var cssClass = "alert";
+                                if (json.recentalerts[i].read === "1") cssClass += " red-alert";
+                                alertHTML += "<div class=\"alert\">" +
+                                             "<img src=\"" + json.recentalerts[i].typeicon + "\" width=\"" + json.recentalerts[i].typeiconwidth + "\" height=\"" + json.recentalerts[i].typeiconheight + "\">" +
+                                             "<a class=\"" + cssClass + "\" style=\"padding-left:0;\" href=\"https://www.scirra.com" + json.recentalerts[i].url + "\">" +
+                                             json.recentalerts[i].title + "</a>" +
+                                             "<p><em>" + json.recentalerts[i].message + "</em></p>" +
+                                            "<div class=\"alert-timeago\">" + json.recentalerts[i].date + "</div>" +
+                                            "<div class=\"clear\"></div></div><div class=\"hr\"></div>";
+
+                            });
+
+                            $('#alerthtmlwrap').html(alertHTML);
+                        }
+                    });
+
+                    loadedAlertsDropdown = true;
+                }
+
+                $('#AlertsDropDown').slideDown('fast');
+
+
+            }
+
+
+            function showUserDropDown() {
+
+                if (!loadedUserDropdown) {
+                    $.ajax({
+                        dataType: "json",
+                        url: "https://www.scirra.com/handlers/fresh/getuserdropdowndetails.ashx?userID=0",
+                        data: "",
+                        success: function(json) {
+
+                            $('#MyProfileLink').attr("href", "https://www.scirra.com/users/" + json.seousername);
+                            $('#DropDownAvatar').attr("src", json.avatar);
+
+                            var newPMs = parseInt(json.unreadpms);
+                            if (newPMs === 0) {
+                                $('#DropDownInbox').html("Inbox (0)");
+                            } else {
+                                $('#DropDownInbox').html("Inbox <strong>(" + newPMs + ")</strong>");
+                            }
+
+                            var sellerID = parseInt(json.sellerid);
+                            
+                            if (sellerID != 0) {
+                                $('#DropDownSellerLink').attr("style", "");
+                            }
+
+                            $('#DropDownBadges').html("<div class=\"medal gold\"></div> " + json.goldbadges + " <div class=\"medal silver\"></div> " + json.silverbadges + " <div class=\"medal bronze\"></div> " + json.bronzebadges);
+                            $('#DropDownRep').html(json.reputation);
+                        }
+                    });
+                    loadedUserDropdown = true;
+                }
+
+                $('#UserDropDown').slideDown('fast');
+            }
+
+
+            $('#UserDropDown').click(function (event) {
+                event.stopPropagation();
+            });
+            $('#AlertsDropDown').click(function (event) {
+                event.stopPropagation();
+            });
+            
+            $('body').click(function (e) {
+                hideUserDropDown();
+                hideAlertsDropDown();
+            });
+
+        });
+        
+        function hideAlertsDropDown() {
+            $('#AlertsDropDown').slideUp('fast');
+        }
+
+
+
+
+        function plusone_callback(response) {
+            $.ajax({
+                url: RelPath + "handlers/gp1.ashx?o=" + response.state + "&u=" + response.href,
+                context: document.body,
+                success: function () {
+                    $(this).addClass("done");
+                }
+            });
+
+        }
+
+    </script>
+    <script src="//apis.google.com/js/plusone.js"></script>
+
+    
+    <script>
+        var defaultSearchTxt = "Search manual...";
+        $(document).ready(function () {
+
+            if ($('#ManualSearch').val() == "")
+                $('#ManualSearch').val(defaultSearchTxt);
+            $('#ManualSearch').focus(function () {
+                if ($('#ManualSearch').val() == defaultSearchTxt)
+                    $('#ManualSearch').val("");
+                $('#ManualSearch').css("color", "#666");
+            });
+            $('#ManualSearch').blur(function () {
+                if ($.trim($('#ManualSearch').val()) == "")
+                    $('#ManualSearch').val(defaultSearchTxt);
+                $('#ManualSearch').css("color", "#E5E4E2");
+            });
+
+        });
+    </script>
+     <script>
+            SyntaxHighlighter.all();
+    </script>
+
+    
+    <script>
+        function selectManualCategory(catID) {
+            alert(catID);
+        }
+    </script>
+
+
+    
+    
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-21804850-2']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+        function plusone_callback(response) {
+            $.ajax({
+                url: RelPath + "handlers/gp1.ashx?o=" + response.state + "&u=" + response.href,
+                context: document.body,
+                success: function () {
+
+                }
+            });
+        }
+
+
+
+
+    </script>
+
+    </form>
+
+</body>
+</html>

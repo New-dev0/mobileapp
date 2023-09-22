@@ -1,0 +1,455 @@
+
+
+<!DOCTYPE html>
+<html lang="en" runat="server" >
+    
+<head><meta charset="UTF-8" /><link rel="shortcut icon" href="//static4.scirra.net/images/fresh/scirra-favicon-02.ico" /><link rel="apple-touch-icon" href="//static4.scirra.net/images/fresh/scirra-favicon-57px-01.png" /><link href="//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css" /><link href="//fonts.googleapis.com/css?family=Sansita+One" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="//static3.scirra.net/css/fresh.css?v=167" />
+    
+    
+    <title>Local storage - Construct 2 Manual</title>
+    <link href="https://www.scirra.com/manual/188/local-storage" rel="canonical" />
+    <script src='//static2.scirra.net/js/shcore.js?v=20' type='text/javascript'></script>
+    <script src='//static1.scirra.net/js/shbrushjscript.js?v=20' type='text/javascript'></script>
+    <link rel="stylesheet" href="//static1.scirra.net/css/shcore.css?v=167" />
+    <link rel="stylesheet" href="//static3.scirra.net/css/shthemedefault.css?v=167" />
+    <link rel="stylesheet" href="//static4.scirra.net/css/freshmanual.css?v=167" />
+<meta name="viewport" content="width=1024" /><meta name="theme-color" content="#06c3ab" /><title>
+
+</title></head>
+<body>
+    
+    <form method="post" action="local-storage?ID=188&amp;&amp;bodypage=1" id="Form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F75732CA" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="M03FHfwfZw1jl35WOZgQ1A4qkAkp2VklHz56smKMWG1OPogw0rNlTLFlNjyqoe0fqP4ssyyWa7kuhcGyRKTW6ucALffRVEPnAaYH6A9HzYrSEVup" />
+</div>
+  
+    <header>
+        
+    
+
+
+<div class="menu-wrapper">
+    <div class="content-wrap">
+        
+            <a class="topmenu-logo" href="https://www.scirra.com"><img src="//static4.scirra.net/images/fresh/scirra-logo-small-01.png" width="101" height="28" alt="Scirra Logo Small"/></a>
+        
+        <ul>
+            <li ><a href="https://www.scirra.com/construct2">Construct 2</a></li>
+            <li  class="selected"><a href="https://www.scirra.com/manual">Manual</a></li>
+            <li ><a href="https://www.scirra.com/tutorials">Tutorials</a></li><li class="split"></li>
+            <li ><a href="https://www.scirra.com/store">Store</a></li><li class="split"></li>
+            <li ><a href="https://www.scirra.com/arcade">Arcade</a></li><li class="split"></li>
+            <li ><a href="https://www.scirra.com/blog">Blog</a></li><li class="split"></li>
+            <li ><a href="https://www.scirra.com/forum">Forums</a></li><li class="split"></li>
+            <li ><a href="https://www.scirra.com/education">Education</a></li><li class="split"></li>
+        </ul>
+        
+            <div class="guest-panel">
+                <a href="https://www.scirra.com/register" title="Create a Scirra account">Register</a> or <a href="https://www.scirra.com/login" title="Login to your Scirra account">Login</a>
+            </div>
+        
+        
+        <div class="clear"></div>
+        
+        
+        
+        <div id="AlertsDropDown" class="alerts-dropdown">
+	
+            <div class="dropdown-tip"></div>
+            <div class="dropdown-links c sm">
+                <a href="https://www.scirra.com/alerts">View All Alerts</a>
+            </div>
+            <div class="hr"></div>
+
+            <div id="alerthtmlwrap"></div>
+
+        
+</div>
+
+    </div>
+</div>
+
+        <div class="content-wrap">
+
+        </div>
+    </header>
+
+    
+    <div class="clear"></div>
+    
+    
+    <div class="content-wrap">
+        
+        
+
+<div class="sub-menu">
+    <ul>
+        <li class="selected"><a href="../1/construct-2">Construct 2</a></li><li><a href="../15/sdk">SDK</a></li><li><a href="../search">Search Manual</a></li><li><a href="../../manual.zip">Download Manual</a></li>
+    </ul>
+</div>
+        
+        <div class="left-menu">
+            
+            <input name="ctl00$BodyContent$ManualSearch" type="text" id="ManualSearch" class="ManualSearchBox" />
+
+            <a class="header" href="../2/installing" title="Overview of the installation section."><span class="arr">▶</span>Installing</a><a class="header" href="../10/overview" title="Overview of Construct 2."><span class="arr">▶</span>Overview</a><a class="header" href="../36/interface" title=""><span class="arr">▶</span>Interface</a><a class="header" href="../65/project-primitives" title=""><span class="arr">▶</span>Project primitives</a><a class="header" href="../86/behavior-reference" title=""><span class="arr">▶</span>Behavior Reference</a><a class="header" href="../106/plugin-reference" title=""><span class="arr">▼</span>Plugin reference</a><ul class="submenu-level-0 "><li><a  href="../130/common-features" title=""><span class="arr">▶</span>Common features</a><ul class="submenu-level-1 hidden-menu"><li><a  href="../131/common-conditions" title="">Common conditions</a></li><li><a  href="../132/common-actions" title="">Common actions</a></li><li><a  href="../133/common-expressions" title="">Common expressions</a></li></ul></li><li><a  href="../151/9-patch" title="">9-patch</a></li><li><a  href="../184/admob" title="">AdMob</a></li><li><a  href="../107/ajax" title="">AJAX</a></li><li><a  href="../108/array" title="">Array</a></li><li><a  href="../109/audio" title="">Audio</a></li><li><a  href="../110/browser" title="">Browser</a></li><li><a  href="../111/button" title="">Button</a></li><li><a  href="../140/dictionary" title="">Dictionary</a></li><li><a  href="../112/facebook" title="">Facebook</a></li><li><a  href="../182/file-chooser" title="">File chooser</a></li><li><a  href="../149/function" title="">Function</a></li><li><a  href="../186/game-center" title="">Game Center</a></li><li><a  href="../143/gamepad" title="">Gamepad</a></li><li><a  href="../164/geolocation" title="">Geolocation</a></li><li><a  href="../175/google-play" title="">Google Play</a></li><li><a  href="../187/iad" title="">iAd</a></li><li><a  href="../173/iap" title="">IAP</a></li><li><a  href="../138/intel-agi" title="">Intel AGI</a></li><li><a  href="../113/keyboard" title="">Keyboard</a></li><li><a  href="../136/kongregate" title="">Kongregate</a></li><li><a  href="../155/list" title="">List</a></li><li><a  class="selected"  href="local-storage" title="">Local Storage</a></li><li><a  href="../114/mouse" title="">Mouse</a></li><li><a  href="../174/multiplayer" title="">Multiplayer</a></li><li><a  href="../162/nwjs" title="">NW.js</a></li><li><a  href="../135/particles" title="">Particles</a></li><li><a  href="../180/progress-bar" title="">Progress bar</a></li><li><a  href="../185/pubcenter" title="">pubCenter</a></li><li><a  href="../159/scirra-arcade" title="">Scirra Arcade</a></li><li><a  href="../178/shadow-light" title="">Shadow light</a></li><li><a  href="../179/slider-bar" title="">Slider bar</a></li><li><a  href="../115/sprite" title="">Sprite</a></li><li><a  href="../166/sprite-font" title="">Sprite font</a></li><li><a  href="../116/text" title="">Text</a></li><li><a  href="../117/textbox" title="">Textbox</a></li><li><a  href="../118/tiled-background" title="">Tiled Background</a></li><li><a  href="../172/tilemap" title="">Tilemap</a></li><li><a  href="../119/touch" title="">Touch</a></li><li><a  href="../176/twitter" title="">Twitter</a></li><li><a  href="../144/user-media" title="">User Media</a></li><li><a  href="../181/video" title="">Video</a></li><li><a  href="../153/websocket" title="">WebSocket</a></li><li><a  href="../120/webstorage" title="">WebStorage</a></li><li><a  href="../145/windows-8" title="">Windows 8</a></li><li><a  href="../139/xml" title="">XML</a></li></ul><a class="header" href="../123/system-reference" title=""><span class="arr">▶</span>System reference</a>
+
+
+            
+            <div class="c">
+                
+                <h3>Download the Manual</h3>
+                <a href="../../manual.zip" id="A1" title="Construct 2 Manual"><img style="margin-top:15px;" src="//static1.scirra.net/images/manual-cover-small.png" width="151" height="237"/></a><br/>
+                <a href="../../manual.zip" title="Construct 2 Manual">Download the Official Construct 2 Manual (2.2mb)</a>
+
+                <h3>Latest Manual Students</h3>
+                <div style="margin-top:10px;">
+                    
+                </div>
+                <div class="clear"></div>
+                <p style="font-size:12px">For people who've read <a id="StudentBadgeLink" href="../../badges/18/manual-student">at least 20 entries</a>!</p>
+            </div>
+        </div>
+        <div class="inner-content-wrap">
+            
+            <h1>Local storage</h1>
+            
+            
+
+            <p>The <strong>Local Storage</strong> plugin can <strong>store data locally</strong> on the user's device. For example it can be used to store a personal best high-score. Note if you want a full-state save and load feature, see <a href="https://www.scirra.com/tutorials/526/how-to-make-savegames" rel="nofollow">How to make savegames</a>.<p><p>Local Storage works offline, since it stores data to the device itself. Different browsers use different storages, so data is not shared between different browsers on the same computer - each browser has its own unique storage. This is also separate to the browser <em>cache</em>, which is temporary storage to avoid needlessly re-downloading the same files over and over again. However the user can usually still choose to clear local storage data from their browser (with an option perhaps named something like "clear offline website data"). Non-browser export options like NW.js, Cordova or Windows Store apps are not affected by the user clearing any amount of data from any browser, they also use separate storage. Finally for security reasons browsers use separate storage per domain. For example all content on <em>scirra.com</em> shares the same storage, but content on <em>facebook.com</em> uses a different storage and cannot access any data saved from <em>scirra.com</em>.</p><a name="h2a0"></a><h3 id="h2ix0">Storage quotas</h3><p>To prevent abuse, most browsers implement a storage quota, which is a maximum amount of data that can be saved locally. On most modern browsers this is at least 50mb. If the quota is exceeded, the <em>On error</em> trigger will fire.</p><a name="h2a1"></a><h3 id="h2ix1">Using Local Storage</h3><p>Local Storage uses a very simple storage system: values are stored under named <em>keys</em>, similar to how the <a href="http://www.scirra.com/manual/140/dictionary" rel="nofollow">Dictionary object</a> works. For example the value 100 could be stored under a key named <em>score</em>.</p><p>Local Storage is asynchronous. This means reading and writing data does not complete immediately. The actions only start the process of reading or writing a value, and the game continues to run in the interim. This ensures that slow or busy storage systems do not impact the performance of the game. When the read or write is complete, a trigger fires (<em>On item get</em> or <em>On item set</em>) which indicates either the value is available to read (with the <em>ItemValue</em> expression) or that the value was successfully written.</p><p>For example here is a flow to read the value of the key "score":</p><ol><li>Use the action <em>Get item "score"</em></li><li>A moment later, <em>On item "score" get</em> triggers</li><li>In this trigger, use the <em>ItemValue</em> expression to read the item</li></ol><p>Here is a flow to set the new value of "score":</p><ol><li>Use the action <em>Set item "score" to 100</em></li><li>A moment later, <em>On item "score" set</em> triggers</li><li>You may not need to do anything in this trigger, but it indicates the value has been successfully written. The <em>Key</em> and <em>ItemValue</em> expressions are still set in this trigger in case you need them.</li></ol><p>Note that you must be careful to avoid "races" when using asynchronous storage. For example the <em>Clear storage</em> action may take a moment to complete before it fires <em>On storage cleared</em>. It is possible to write more values to storage in between, while <em>Clear storage</em> is still processing. This is like "racing" the <em>Clear storage</em> and <em>Set item</em> actions: the end result depends on what order they complete in, which is unpredictable. In this case it is more or less random what happens: the written keys may be cleared, or they may not be - you cannot rely on any specific result. Therefore you should be careful to avoid this case.</p><a name="h2a2"></a><h3 id="h2ix2">Simplifying usage with Dictionary</h3><p>Although it improves performance, dealing with asynchronous reads and writes can sometimes be difficult. One simple way to conveniently have synchronous storage is to store an entire <a href="http://www.scirra.com/manual/140/dictionary" rel="nofollow">Dictionary object</a>'s contents to Local Storage, by saving its <em>AsJSON</em> string. Then you can load this content from Local Storage with the <em>Load</em> action. This means only saving and loading the dictionary contents is asynchronous, and the rest of the time you can use the Dictionary object's features to synchronously access data, such as simply using its <em>Get</em> expression to immediately read a value. However you must remember to save the Dictionary again at some point before the user quits the game.</p><a name="h2a3"></a><h3 id="h2ix3">Local Storage conditions</h3><p><strong>On any item get</strong><br>Triggered after any <em>Get item</em> action completes.</p><p><strong>On any item removed</strong><br>Triggered after any <em>Remove item</em> action completes.</p><p><strong>On any item set</strong><br>Triggered after any <em>Set item</em> action completes.</p><p><strong>On item exists</strong><br>Triggered after the <em>Check item exists</em> action completes if the key checked does indeed exist. In this trigger the <em>ItemValue</em> expression is also set to the value of this key, so there is no need to use another <em>Get item</em> action to read it.</p><p><strong>On item get</strong><br>Triggered after a <em>Get item</em> action completes for a given key. The <em>ItemValue</em> expression is set to the value of the key.</p><p><strong>On item missing</strong><br>Triggered after the <em>Check item exists</em> action completes if the key checked does not exist.</p><p><strong>On item removed</strong><br>Triggered after the <em>Remove item</em> action completes for a given key.</p><p><strong>On item set</strong><br>Triggered after the <em>Set item</em> action completes for a given key. This indicates the data is now in storage.</p><p><strong>Compare key</strong><br>Compare the current value of the <em>Key</em> expression, which is the name of the current key in a trigger. This can be useful in the <em>On any item...</em> triggers.</p><p><strong>Compare value</strong><br>Compare the current value of the <em>ItemValue</em> expression, which is set to the item value when getting an item or in <em>On item exists</em>.</p><p><strong>On all key names loaded</strong><br>Triggered after the <em>Get all key names</em> action completes. In this trigger the <em>KeyCount</em> and <em>KeyAt</em> expressions give the list of all the key names.</p><p><strong>On error</strong><br>Triggered at any time while using Local Storage if an error occurs, such as if a write failed, or the maximum storage quota was exceeded. The <em>ErrorMessage</em> expression is set to the error message if available.</p><p><strong>On storage cleared</strong><br>Triggered after the <em>Clear storage</em> action completes and storage is now empty.</p><p><strong>Is processing gets</strong><br>True if any <em>Get item</em> actions are still processing, i.e. any <em>On item get</em> trigger is yet to fire for a <em>Get item</em> action.</p><p><strong>Is processing sets</strong><br>True if any <em>Set item</em> actions are still processing, i.e. any <em>On item set</em> trigger is yet to fire for a <em>Set item</em> action.</p><p><strong>On all gets complete</strong><br>Triggered when all outstanding <em>Get item</em> actions are completed, i.e. when <em>Is processing gets</em> first becomes false. In other words if 10 <em>Get item</em> actions are all used at the same time, <em>On all gets complete</em> triggers when all 10 items have been read and fired their <em>On item get</em> triggers.</p><p><strong>On all sets complete</strong><br>Triggered when all outstanding <em>Set item</em> actions are completed, i.e. when <em>Is processing sets</em> first becomes false. In other words if 10 <em>Set item</em> actions are all used at the same time, <em>On all sets complete</em> triggers when all 10 items have been written and fired their <em>On item set</em> triggers.</p><a name="h2a4"></a><h3 id="h2ix4">Local Storage actions</h3><p><strong>Check item exists</strong><br>Check if a key exists in storage. This triggers either <em>On item exists</em> if the key exists, or <em>On item missing</em> if the key does not exist. If the item exists, the <em>ItemValue</em> expression is set to the key value in the <em>On item exists</em> trigger, so there is no need to use a subsequent <em>Get item</em> action to read the value.</p><p><strong>Get item</strong><br>Read the value of a key in storage. This triggers <em>On item get</em> when the value has been read, where the <em>ItemValue</em> expression is set to the value of the key.</p><p><strong>Remove item</strong><br>Remove (delete) a key from storage. This triggers <em>On item removed</em> when the key has been removed.</p><p><strong>Set item</strong><br>Set the value of a key in storage. This triggers <em>On item set</em> when the value has been written.</p><p><strong>Clear storage</strong><br>Remove (delete) all items from storage, reverting it back to the empty state. This triggers <em>On storage cleared</em> when completed.</p><p><strong>Get all key names</strong><br>Retrieve a list of all the key names that currently exist in storage. This triggers <em>On all key names loaded</em> when the list has been loaded, where the <em>KeyCount</em> and <em>KeyAt</em> expressions can be used to access the list.</p><a name="h2a5"></a><h3 id="h2ix5">Local Storage expressions</h3><p><strong>ItemValue</strong><br>The value for a key that has been read or written in any Local Storage trigger, such as <em>On item get</em> or <em>On item exists</em>. This can be either a string or a number. This returns 0 if used outside of a Local Storage trigger.</p><p><strong>Key</strong><br>The name of the key that was modified in any Local Storage trigger, such as <em>On item get</em>, <em>On item set</em> or <em>On any item set</em>. This returns an empty string if used outside of a Local Storage trigger.</p><p><strong>ErrorMessage</strong><br>In <em>On error</em>, the text of the error message if any is available.</p><p><strong>KeyAt(index)</strong><br>In <em>On all key names loaded</em>, the name of the key at the given zero-based index in the list.</p><p><strong>KeyCount</strong><br>In <em>On all key names loaded</em>, the number of key names in the list.</p>
+            
+
+
+            
+                <h2 class="l">Tags:</h2>
+                <ul class="tag-list">
+                    <li><a title="If you want to make games Construct 2 is the tool of choice. Create games and share them. No programming required, and games created are exported to HTML5. Make a game in Construct 2." href="../../tags/77/construct2">Construct2</a></li><li><a title="" href="../../tags/668/localstorage">LocalStorage</a></li><li><a title="The Construct 2 manual/documentation is a valuable reference for anyone wanting to make an HTML5 game in Construct 2 the game creator. The official documentation is a comprehensive guide." href="../../tags/162/manual">Manual</a></li><li><a title="" href="../../tags/377/plugins">Plugins</a></li><li><a title="Reference refers to a resource that can be used to reference functions of Construct 2 the game making program. References are useful for quickly obtaining desired information." href="../../tags/214/reference">Reference</a></li>
+                </ul>
+            
+
+            <div class="social-footer">
+                <h3>Now get to know us a little better</h3>
+                <ul>
+                    <li><div class="g-plusone" data-size="tall" data-href="https://plus.google.com/105404553461194404336"></div></li>
+                    <li style="padding-top:15px;"><a href="https://twitter.com/Scirra" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @Scirra</a></li>
+                    <li><iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FScirraOfficial&amp;send=false&amp;layout=box_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=tahoma&amp;height=90&amp;appId=140276622761263" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:45px; height:90px;" allowTransparency="true"></iframe></li>
+                </ul>
+            </div>
+        </div>
+        
+        <a></a><a></a>
+
+        <div class="clear"></div>
+    </div>
+
+    
+    <footer>
+        <div class="footer-tear"></div>
+        <div class="footer-wrap">
+            <div class="content-wrap">
+                <ul>
+                    <li>
+                        <h2>Make Games</h2>
+                        <ul>
+                            <li><a href="../../construct2">Construct 2</a></li>
+                            <li><a href="../../construct2/releases">Download Construct 2</a></li>
+                            <li><a href="../../store/construct-2">Pricing</a></li>
+                            <li><a href="../../store/construct-2">Compare Features</a></li>
+                            <li><a href="../../manual">Online Manual</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2>Play Games</h2>
+                        <ul>
+                            <li><a href="../../arcade">Arcade</a></li>
+                            <li><a href="../../arcade/submit">Upload a Game</a></li>
+                            <li><a href="../../forum/arcade_forum48.html">Discuss</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2>Download</h2>
+                        <ul>
+                            <li><a id="LatestStableLink" href="../../construct2/releases/r212.2">Stable Release (r212.2)</a></li>
+                            <li><a id="LatestBetaLink" href="../../construct2/releases/r214">Beta Release (r214)</a></li>
+                        </ul>
+                        <div class="total-dl-wrap" title="Construct 2 has been downloaded 2,546,154 times to date"><div class="ch">2</div><div class="chs"></div><div class="ch">5</div><div class="ch">4</div><div class="ch">6</div><div class="chs"></div><div class="ch">1</div><div class="ch">5</div><div class="ch">4</div><p title="Aggregate total from Scirra.com website and large distributors">Total downloads</p></div>
+                        <h2 style="margin-top:5px;margin-bottom:0px;">Game Assets</h2>
+                        <ul>
+                            <li><a href="http://www.scirra.com/freebundle.zip" target="_blank">Free Bundle (34mb)</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2>Community</h2>
+                        <ul>
+                            <li><a href="../../blog">Blog</a></li>
+                            <li><a href="../../forum">Forums</a></li>
+                            <li><a href="../../tutorials">Tutorials</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2>About Scirra</h2>
+                        <ul>
+                            <li><a href="../../about">About Scirra</a></li>
+                            <li><a href="../../careers">Careers</a></li>
+                            <li><a href="../../contact">Contact Us</a></li>
+                            <li><a href="../../press-kit">Press Kit</a></li>
+                            <li><a href="../../people">The Team</a></li>
+                            <li><a href="../../privacy-policy">Privacy Policy</a></li>
+                            <li><a href="../../terms-and-conditions">Terms and Conditions</a></li>
+                            <li><a href="../../sitemap">Site Map</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+                
+                <div class="footer-item-wrap">
+                    <div>
+                         <a href="../../"><img src="//static3.scirra.net/images/fresh/footer-scirra-logo-01.png" width="177" height="44" alt="Scirra Logo"/></a>
+                    </div>
+                    <div class="address">
+                        Scirra Ltd, Studio 117, The Lightbulb<br />1 Filament Walk, London, SW18 4GQ
+                    </div>
+                    <div class="postcard">
+                        <a href="../../badges/45/postcard">Send us a postcard!</a>
+                    </div>
+                    <div>
+                       <ul>
+                            <li><a href="https://www.facebook.com/ScirraOfficial" target="_blank"><img src="//static2.scirra.net/images/fresh/footer-facebook-icon-01.png" width="34" height="35"/></a></li>
+                            <li><a href="https://twitter.com/scirra" target="_blank"><img src="//static1.scirra.net/images/fresh/footer-twitter-icon-01.png" width="34" height="35"/></a></li>
+                            <li><a href="https://plus.google.com/105404553461194404336/posts" target="_blank"><img src="//static2.scirra.net/images/fresh/footer-google-plus-icons-01.png" width="34" height="35"/></a></li>
+                       </ul>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="copyright">Copyright &copy; 2015 Scirra Ltd, All rights reserved.</div>
+
+            </div>
+        </div>
+    </footer>
+    
+     <script>
+         var RelPath = "../../";
+         var Domainroot = "http://www.scirra.com";
+     </script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="//static4.scirra.net/js/common.js?v=20"></script> 
+    <script type="text/javascript">
+
+        var alertsMarked = false;
+        var loadedUserDropdown = false;
+        var loadedAlertsDropdown = false;
+
+        $(document).ready(function () {
+            
+
+
+            $('#fblikeframe').html('<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.scirra.com&send=false&layout=button_count&width=150&show_faces=true&action=like&colorscheme=light&font&height=21&appId=197624256970598" height="21" scrolling="no" frameborder="0" allowTransparency="true"></iframe>');
+            !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } } (document, "script", "twitter-wjs");
+
+            $('#AlertBoxLink').click(function () {
+
+                if ($('#AlertsDropDown').is(':visible')) {
+                    hideAlertsDropDown();
+                } else {
+                    showAlertsDropDown();
+                    hideUserDropDown();
+                }
+                return false;
+            });
+
+            $('#UserDropdownLink').click(function () {
+
+                if ($('#UserDropDown').is(':visible')) {
+                    hideUserDropDown();
+                } else {
+                    showUserDropDown();
+                    hideAlertsDropDown();
+                }
+                return false;
+            });
+            function hideUserDropDown() {
+                $('#UserDropDown').slideUp('fast');
+            }
+
+            function showAlertsDropDown() {
+
+                if (!loadedAlertsDropdown) {
+
+                    $.ajax({
+                        dataType: "json",
+                        url: "https://www.scirra.com/handlers/fresh/getuseralertsdropdown.ashx",
+                        data: "",
+                        success: function (json) {
+
+                            var alertHTML = "";
+
+                            $.each(json.recentalerts, function (i, item) {
+                                var cssClass = "alert";
+                                if (json.recentalerts[i].read === "1") cssClass += " red-alert";
+                                alertHTML += "<div class=\"alert\">" +
+                                             "<img src=\"" + json.recentalerts[i].typeicon + "\" width=\"" + json.recentalerts[i].typeiconwidth + "\" height=\"" + json.recentalerts[i].typeiconheight + "\">" +
+                                             "<a class=\"" + cssClass + "\" style=\"padding-left:0;\" href=\"https://www.scirra.com" + json.recentalerts[i].url + "\">" +
+                                             json.recentalerts[i].title + "</a>" +
+                                             "<p><em>" + json.recentalerts[i].message + "</em></p>" +
+                                            "<div class=\"alert-timeago\">" + json.recentalerts[i].date + "</div>" +
+                                            "<div class=\"clear\"></div></div><div class=\"hr\"></div>";
+
+                            });
+
+                            $('#alerthtmlwrap').html(alertHTML);
+                        }
+                    });
+
+                    loadedAlertsDropdown = true;
+                }
+
+                $('#AlertsDropDown').slideDown('fast');
+
+
+            }
+
+
+            function showUserDropDown() {
+
+                if (!loadedUserDropdown) {
+                    $.ajax({
+                        dataType: "json",
+                        url: "https://www.scirra.com/handlers/fresh/getuserdropdowndetails.ashx?userID=0",
+                        data: "",
+                        success: function(json) {
+
+                            $('#MyProfileLink').attr("href", "https://www.scirra.com/users/" + json.seousername);
+                            $('#DropDownAvatar').attr("src", json.avatar);
+
+                            var newPMs = parseInt(json.unreadpms);
+                            if (newPMs === 0) {
+                                $('#DropDownInbox').html("Inbox (0)");
+                            } else {
+                                $('#DropDownInbox').html("Inbox <strong>(" + newPMs + ")</strong>");
+                            }
+
+                            var sellerID = parseInt(json.sellerid);
+                            
+                            if (sellerID != 0) {
+                                $('#DropDownSellerLink').attr("style", "");
+                            }
+
+                            $('#DropDownBadges').html("<div class=\"medal gold\"></div> " + json.goldbadges + " <div class=\"medal silver\"></div> " + json.silverbadges + " <div class=\"medal bronze\"></div> " + json.bronzebadges);
+                            $('#DropDownRep').html(json.reputation);
+                        }
+                    });
+                    loadedUserDropdown = true;
+                }
+
+                $('#UserDropDown').slideDown('fast');
+            }
+
+
+            $('#UserDropDown').click(function (event) {
+                event.stopPropagation();
+            });
+            $('#AlertsDropDown').click(function (event) {
+                event.stopPropagation();
+            });
+            
+            $('body').click(function (e) {
+                hideUserDropDown();
+                hideAlertsDropDown();
+            });
+
+        });
+        
+        function hideAlertsDropDown() {
+            $('#AlertsDropDown').slideUp('fast');
+        }
+
+
+
+
+        function plusone_callback(response) {
+            $.ajax({
+                url: RelPath + "handlers/gp1.ashx?o=" + response.state + "&u=" + response.href,
+                context: document.body,
+                success: function () {
+                    $(this).addClass("done");
+                }
+            });
+
+        }
+
+    </script>
+    <script src="//apis.google.com/js/plusone.js"></script>
+
+    
+    <script>
+        var defaultSearchTxt = "Search manual...";
+        $(document).ready(function () {
+
+            if ($('#ManualSearch').val() == "")
+                $('#ManualSearch').val(defaultSearchTxt);
+            $('#ManualSearch').focus(function () {
+                if ($('#ManualSearch').val() == defaultSearchTxt)
+                    $('#ManualSearch').val("");
+                $('#ManualSearch').css("color", "#666");
+            });
+            $('#ManualSearch').blur(function () {
+                if ($.trim($('#ManualSearch').val()) == "")
+                    $('#ManualSearch').val(defaultSearchTxt);
+                $('#ManualSearch').css("color", "#E5E4E2");
+            });
+
+        });
+    </script>
+     <script>
+            SyntaxHighlighter.all();
+    </script>
+
+    
+    <script>
+        function selectManualCategory(catID) {
+            alert(catID);
+        }
+    </script>
+
+
+    
+    
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-21804850-2']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+        function plusone_callback(response) {
+            $.ajax({
+                url: RelPath + "handlers/gp1.ashx?o=" + response.state + "&u=" + response.href,
+                context: document.body,
+                success: function () {
+
+                }
+            });
+        }
+
+
+
+
+    </script>
+
+    </form>
+
+</body>
+</html>

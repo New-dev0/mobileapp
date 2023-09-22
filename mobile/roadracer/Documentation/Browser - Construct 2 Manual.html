@@ -1,0 +1,455 @@
+
+
+<!DOCTYPE html>
+<html lang="en" runat="server" >
+    
+<head><meta charset="UTF-8" /><link rel="shortcut icon" href="//static4.scirra.net/images/fresh/scirra-favicon-02.ico" /><link rel="apple-touch-icon" href="//static4.scirra.net/images/fresh/scirra-favicon-57px-01.png" /><link href="//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css" /><link href="//fonts.googleapis.com/css?family=Sansita+One" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="//static3.scirra.net/css/fresh.css?v=167" />
+    
+    
+    <title>Browser - Construct 2 Manual</title>
+    <link href="https://www.scirra.com/manual/110/browser" rel="canonical" />
+    <script src='//static2.scirra.net/js/shcore.js?v=20' type='text/javascript'></script>
+    <script src='//static1.scirra.net/js/shbrushjscript.js?v=20' type='text/javascript'></script>
+    <link rel="stylesheet" href="//static1.scirra.net/css/shcore.css?v=167" />
+    <link rel="stylesheet" href="//static3.scirra.net/css/shthemedefault.css?v=167" />
+    <link rel="stylesheet" href="//static4.scirra.net/css/freshmanual.css?v=167" />
+<meta name="viewport" content="width=1024" /><meta name="theme-color" content="#06c3ab" /><title>
+
+</title></head>
+<body>
+    
+    <form method="post" action="browser?ID=110&amp;&amp;bodypage=1" id="Form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F75732CA" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="PPoNpbhd79PCyZhBhERV9NvvPe3Hv4/RKPe1zlx2cLhU3jWsf8OT5seyMu9mNp9HiS3KL0CmBRKfDodUCOYO6ImwGZL5Z9sfzKb1r1LbyeQ0EjLf" />
+</div>
+  
+    <header>
+        
+    
+
+
+<div class="menu-wrapper">
+    <div class="content-wrap">
+        
+            <a class="topmenu-logo" href="https://www.scirra.com"><img src="//static4.scirra.net/images/fresh/scirra-logo-small-01.png" width="101" height="28" alt="Scirra Logo Small"/></a>
+        
+        <ul>
+            <li ><a href="https://www.scirra.com/construct2">Construct 2</a></li>
+            <li  class="selected"><a href="https://www.scirra.com/manual">Manual</a></li>
+            <li ><a href="https://www.scirra.com/tutorials">Tutorials</a></li><li class="split"></li>
+            <li ><a href="https://www.scirra.com/store">Store</a></li><li class="split"></li>
+            <li ><a href="https://www.scirra.com/arcade">Arcade</a></li><li class="split"></li>
+            <li ><a href="https://www.scirra.com/blog">Blog</a></li><li class="split"></li>
+            <li ><a href="https://www.scirra.com/forum">Forums</a></li><li class="split"></li>
+            <li ><a href="https://www.scirra.com/education">Education</a></li><li class="split"></li>
+        </ul>
+        
+            <div class="guest-panel">
+                <a href="https://www.scirra.com/register" title="Create a Scirra account">Register</a> or <a href="https://www.scirra.com/login" title="Login to your Scirra account">Login</a>
+            </div>
+        
+        
+        <div class="clear"></div>
+        
+        
+        
+        <div id="AlertsDropDown" class="alerts-dropdown">
+	
+            <div class="dropdown-tip"></div>
+            <div class="dropdown-links c sm">
+                <a href="https://www.scirra.com/alerts">View All Alerts</a>
+            </div>
+            <div class="hr"></div>
+
+            <div id="alerthtmlwrap"></div>
+
+        
+</div>
+
+    </div>
+</div>
+
+        <div class="content-wrap">
+
+        </div>
+    </header>
+
+    
+    <div class="clear"></div>
+    
+    
+    <div class="content-wrap">
+        
+        
+
+<div class="sub-menu">
+    <ul>
+        <li class="selected"><a href="../1/construct-2">Construct 2</a></li><li><a href="../15/sdk">SDK</a></li><li><a href="../search">Search Manual</a></li><li><a href="../../manual.zip">Download Manual</a></li>
+    </ul>
+</div>
+        
+        <div class="left-menu">
+            
+            <input name="ctl00$BodyContent$ManualSearch" type="text" id="ManualSearch" class="ManualSearchBox" />
+
+            <a class="header" href="../2/installing" title="Overview of the installation section."><span class="arr">▶</span>Installing</a><a class="header" href="../10/overview" title="Overview of Construct 2."><span class="arr">▶</span>Overview</a><a class="header" href="../36/interface" title=""><span class="arr">▶</span>Interface</a><a class="header" href="../65/project-primitives" title=""><span class="arr">▶</span>Project primitives</a><a class="header" href="../86/behavior-reference" title=""><span class="arr">▶</span>Behavior Reference</a><a class="header" href="../106/plugin-reference" title=""><span class="arr">▼</span>Plugin reference</a><ul class="submenu-level-0 "><li><a  href="../130/common-features" title=""><span class="arr">▶</span>Common features</a><ul class="submenu-level-1 hidden-menu"><li><a  href="../131/common-conditions" title="">Common conditions</a></li><li><a  href="../132/common-actions" title="">Common actions</a></li><li><a  href="../133/common-expressions" title="">Common expressions</a></li></ul></li><li><a  href="../151/9-patch" title="">9-patch</a></li><li><a  href="../184/admob" title="">AdMob</a></li><li><a  href="../107/ajax" title="">AJAX</a></li><li><a  href="../108/array" title="">Array</a></li><li><a  href="../109/audio" title="">Audio</a></li><li><a  class="selected"  href="browser" title="">Browser</a></li><li><a  href="../111/button" title="">Button</a></li><li><a  href="../140/dictionary" title="">Dictionary</a></li><li><a  href="../112/facebook" title="">Facebook</a></li><li><a  href="../182/file-chooser" title="">File chooser</a></li><li><a  href="../149/function" title="">Function</a></li><li><a  href="../186/game-center" title="">Game Center</a></li><li><a  href="../143/gamepad" title="">Gamepad</a></li><li><a  href="../164/geolocation" title="">Geolocation</a></li><li><a  href="../175/google-play" title="">Google Play</a></li><li><a  href="../187/iad" title="">iAd</a></li><li><a  href="../173/iap" title="">IAP</a></li><li><a  href="../138/intel-agi" title="">Intel AGI</a></li><li><a  href="../113/keyboard" title="">Keyboard</a></li><li><a  href="../136/kongregate" title="">Kongregate</a></li><li><a  href="../155/list" title="">List</a></li><li><a  href="../188/local-storage" title="">Local Storage</a></li><li><a  href="../114/mouse" title="">Mouse</a></li><li><a  href="../174/multiplayer" title="">Multiplayer</a></li><li><a  href="../162/nwjs" title="">NW.js</a></li><li><a  href="../135/particles" title="">Particles</a></li><li><a  href="../180/progress-bar" title="">Progress bar</a></li><li><a  href="../185/pubcenter" title="">pubCenter</a></li><li><a  href="../159/scirra-arcade" title="">Scirra Arcade</a></li><li><a  href="../178/shadow-light" title="">Shadow light</a></li><li><a  href="../179/slider-bar" title="">Slider bar</a></li><li><a  href="../115/sprite" title="">Sprite</a></li><li><a  href="../166/sprite-font" title="">Sprite font</a></li><li><a  href="../116/text" title="">Text</a></li><li><a  href="../117/textbox" title="">Textbox</a></li><li><a  href="../118/tiled-background" title="">Tiled Background</a></li><li><a  href="../172/tilemap" title="">Tilemap</a></li><li><a  href="../119/touch" title="">Touch</a></li><li><a  href="../176/twitter" title="">Twitter</a></li><li><a  href="../144/user-media" title="">User Media</a></li><li><a  href="../181/video" title="">Video</a></li><li><a  href="../153/websocket" title="">WebSocket</a></li><li><a  href="../120/webstorage" title="">WebStorage</a></li><li><a  href="../145/windows-8" title="">Windows 8</a></li><li><a  href="../139/xml" title="">XML</a></li></ul><a class="header" href="../123/system-reference" title=""><span class="arr">▶</span>System reference</a>
+
+
+            
+            <div class="c">
+                
+                <h3>Download the Manual</h3>
+                <a href="../../manual.zip" id="A1" title="Construct 2 Manual"><img style="margin-top:15px;" src="//static1.scirra.net/images/manual-cover-small.png" width="151" height="237"/></a><br/>
+                <a href="../../manual.zip" title="Construct 2 Manual">Download the Official Construct 2 Manual (2.2mb)</a>
+
+                <h3>Latest Manual Students</h3>
+                <div style="margin-top:10px;">
+                    
+                </div>
+                <div class="clear"></div>
+                <p style="font-size:12px">For people who've read <a id="StudentBadgeLink" href="../../badges/18/manual-student">at least 20 entries</a>!</p>
+            </div>
+        </div>
+        <div class="inner-content-wrap">
+            
+            <h1>Browser</h1>
+            
+            
+
+            <p>The <strong>Browser</strong> object accesses features of the web browser running the HTML5 game.  It also switch to and from fullscreen mode, detect if the game is updating in the background, and determine if the page is visible.<p><p>Security limitations sometimes prevent browser actions.  For example, the window <em>Close</em> action can only be used when the window was created by a javascript <em>window.open</em> call.</p><a name="h2a0"></a><h3 id="h2ix0">Risks with Javascript string execution</h3><p>The Browser object provides two ways to run a string as Javascript code: the <em>Execute Javascript</em> action, and the <em>ExecJS</em> expression. While occasionally useful, <strong>these are widely regarded as dangerous</strong>.</p><p>Here are a couple of the problems you may experience with these features:</p><ul><li>If you execute a string containing user input, it's possible the user can inject javascript to be executed. This can cause a security vulnerability, crash the game, or allow the user to cheat.</li><li>If you inadvertently use a feature only available on certain platforms, your game will crash on other platforms that do not support the feature. Construct 2 normally protects you from this since it's well-tested on many platforms, but it's an easy mistake to make if you execute Javascript by yourself. Certain non-browser platforms like CocoonJS have a very limited feature set available so are especially easy to break.</li><li>By default, code is minified on export. If you do not write Javascript that is compatible with Google Closure Compiler's ADVANCED mode, it may be broken and crash the game after export.</li><li>Executing strings of Javascript from events can often result in dense and unreadable code which is difficult to modify in future.</li></ul><p>Using the official <a href="https://www.scirra.com/manual/15/sdk" rel="nofollow">Javascript SDK</a> is almost always a more elegant way of including custom Javascript in Construct 2 projects. <strong>If at all possible, write your javascript in a plugin using the SDK.</strong></p><a name="h2a1"></a><h3 id="h2ix1">Browser conditions</h3><p><strong>Cookies enabled</strong><br>True if the user has cookies enabled in their browser.  (Typically it is rare for them to be disabled since many web sites rely on cookies to work properly.)</p><p><strong>Is online</strong><br>True if the browser currently has an active connection to the internet.  Construct 2 games can work offline - see <a href="http://www.scirra.com/tutorials/70/offline-games-in-construct-2" rel="nofollow">Offline games</a> for more information.</p><p><strong>On resized</strong><br>Triggered when the browser window displaying the game is resized.  This includes when changing orientation on a mobile device.  The system expressions <em>WindowWidth</em> and <em>WindowHeight</em> will update to reflect the new size if a fullscreen mode is in use.</p><p><strong>On went online</strong><br><strong>On went offline</strong><br>Triggered if the connection to the internet is becomes available or unavailable during the running of the game.  This is common on mobile devices which may be moving in and out of signal areas.  The <em>Is online</em> condition also changes to reflect the connection status.</p><p><strong>Is portrait/landscape</strong><br>Determine if the current display is portrait (height is greater than width) or landscape (width is greater than height). This is performed by making a simple check on the window size of the browser, so also returns accordingly on a desktop browser depending on its dimensions.</p><p><strong>On back button</strong><br>Triggered when the user presses the device's 'Back' button.  Note not all devices have this button (e.g. iOS devices only have a 'Home' button) and not all platforms support this trigger.</p><p><strong>On menu button</strong><br>Triggered when the user presses the device's 'Menu' button.  Note not all devices have this button (e.g. iOS devices only have a 'Home' button) and not all platforms support this trigger.</p><p><strong>On search button</strong><br>Triggered when the user presses the device's 'Search' button.  Note not all devices have this button (e.g. iOS devices only have a 'Home' button) and not all platforms support this trigger.</p><p><strong>Is downloading update</strong><br>True if the game is running from cache, but downloading an updated version in the background.  This can be used to implement a simple auto-updater.  See <a href="http://www.scirra.com/tutorials/70/offline-games-in-construct-2" rel="nofollow">Offline games</a> for more information.</p><p><strong>On update ready</strong><br>Triggered when the game is running from cache, but an updated version has finished downloading in the background.  If the user is still on the game's menu or title screen, you may wish to prompt them to refresh the page (or just do it automatically) so the new version is loaded.  See <a href="http://www.scirra.com/tutorials/70/offline-games-in-construct-2" rel="nofollow">Offline games</a> for more information.</p><p><strong>Is fullscreen</strong><br>True if the browser is running in fullscreen mode.</p><p><strong>Page is visible</strong><br>True if the page the HTML5 game is running on is currently visible.  The page counts as hidden if the window is minimised, the page is in a different tab to the one being viewed, or on a mobile device when the app goes in to the background. When the page is hidden the game automatically pauses.</p><p><strong>On suspended</strong><br><strong>On resumed</strong><br>Triggered when the page's visibility changes, or when a mobile app is going in to the background or foreground.  When invisible or in the background the app is suspended: all events stop running and all audio is muted.</p><p><strong>Supports requesting fullscreen</strong><br>True if the current platform supports the <em>Request fullscreen</em> action. This can be used to determine whether a fullscreen button should be shown.</p><a name="h2a2"></a><h3 id="h2ix2">Browser actions</h3><p><strong>Execute Javascript</strong><br>Run a string of Javascript code. <strong>Great care is necessary to use this correctly - see the section 'Risks with Javascript string execution' above.</strong></p><p><strong>Start group</strong><br><strong>End group</strong><br>Start or end a group in the <a href="https://www.scirra.com/tutorials/147/checking-for-errors-in-browsers" rel="nofollow">browser error console</a>. Groups appear indented, and the browser may give the option to expand/collapse the group easily. Groups can optionally be named. To create a group, use <em>Start group</em>, then a series of <em>Log</em> actions, then the <em>End group</em> action.</p><p><strong>Log</strong><br>Log a message, warning or error to the <a href="https://www.scirra.com/tutorials/147/checking-for-errors-in-browsers" rel="nofollow">browser error console</a>. This can be useful for debugging, testing and diagnostics. </p><p><strong>Vibrate</strong><br>Vibrate the device with a given pattern, if the device/platform supports vibration. The pattern is given as a comma-separated list of times in milliseconds, alternating between vibrate time and waiting. For example the string "200,100,200" specifies a 200ms vibration, 100ms pause, then another 200ms vibration. This allows a single action to specify a whole vibrate pattern.</p><p><strong>Go back</strong><br><strong>Go forward</strong><br>Move through the browser navigation history as if clicking the Back and Forward buttons on the browser.</p><p><strong>Go home</strong><br>Navigate to the browser's set homepage.</p><p><strong>Go to URL</strong><br>Navigate to a given URL.  Note this uses the same window/tab as is showing the HTML5 game, so this action will end the game. The <em>Target</em> can be used to select which frame to redirect, which is only useful if the game is displayed within a frame (e.g. an iframe embed), and the frame has permission to redirect the parent frame (i.e. it is not sandboxed). Possible targets are:<br><em>Self</em>: redirect only the frame that is currently showing the game.<br><em>Parent</em>: redirect the parent frame.<br><em>Top</em>: redirect the top level frame (only different to the parent if more than one frame is used)</p><p><strong>Invoke download</strong><br>Invoke a URL as a file download in the browser. Even if this points to a web page or document, it will be downloaded as a file in the browser interface. The URL can point to any address on the Internet, or it can be the name of any imported project file, or it can be a data URL (useful for downloading canvas snapshots). The filename parameter allows you to choose the filename the browser gives to the download, which can be different to the name of the resource being downloaded.</p><p><strong>Invoke download of string</strong><br>As with <em>Invoke download</em>, but instead of providing a URL to download, a string of the actual data to download as a file is used. A data URI combining the MIME type and data is created, then passed to the browser to download. This is convenient for downloading strings in JSON format as files, e.g. object data from the <em>AsJSON</em> expression.</p><p><strong>Open URL in new window</strong><br>Navigate to a given URL in a new window (or tab if the browser settings override).  This continues to run the HTML5 game in the old window or tab.</p><p><strong>Reload</strong><br>Force the page to refresh.  This effectively restarts the game.</p><p><strong>Alert</strong><br>Bring up a simple 'alert' message box.</p><p><strong>Blur</strong><br>Unfocus the browser window.</p><p><strong>Cancel fullscreen</strong><br>Return to windowed mode if the browser is currently in fullscreen mode.</p><p><strong>Close</strong><br>Close the current window, if the script has permission to do so.</p><p><strong>Focus</strong><br>Focus the browser window.</p><p><strong>Lock orientation</strong><br><strong>Unlock orientation</strong><br>Lock the display of the game to a portrait or landscape mode only, if the current platform supports this. This only has effect on mobile devices. The game may have to already be displaying in fullscreen (using the <em>Request fullscreen</em> action) before the orientation can be locked. Unlocking the orientation restores whatever behavior was set before locking, such as automatically changing orientation depending on the way the device is being held.</p><p><strong>Request fullscreen</strong><br>Request that the browser enter fullscreen mode.  Note the browser may ignore this request unless the action is in a user-initiated event, such as a mouse click, key press, touch event or button press. The fullscreen modes that can be entered correspond to the <em>Fullscreen in browser</em> <a href="http://www.scirra.com/manual/66/projects" rel="nofollow">project property</a>.  For more information see <a href="http://www.scirra.com/tutorials/73/supporting-multiple-screen-sizes" rel="nofollow">supporting multiple screen sizes</a>. Note not all platforms support requesting fullscreen - use the <em>Supports requesting fullscreen</em> condition to check for availability.</p><a name="h2a3"></a><h3 id="h2ix3">Browser expressions</h3><p><strong>BatteryLevel</strong><br>Return the current battery charge level from 0 (discharged) to 1 (fully charged). For example, to get the battery level as a percentage, use <em>round(Browser.BatteryLevel * 100)</em>. If the device does not have a battery or the level is unknown, returns 1.</p><p><strong>BatteryTimeLeft</strong><br>If the device has a battery and the remaining time is known, returns the estimated time in seconds until the system will have to shut down due to battery discharge. If no battery is present or the time left is unknown, returns infinity.</p><p><strong>ExecJS</strong><br>Run a string of Javascript code, and return the result if it is a string or a number. <strong>Great care is necessary to use this correctly - see the section 'Risks with Javascript string execution' above.</strong></p><p><strong>Language</strong><br>Get the browser's current language setting, e.g. <em>en-US</em>.</p><p><strong>Name</strong><br>Get the name the browser reports for itself.  This may be inaccurate for backwards compatibility reasons, e.g. Google Chrome reports its name as <em>Netscape</em>.</p><p><strong>Platform</strong><br>Get the current platform the browser reports itself running on, e.g. <em>Win32</em> for Windows.</p><p><strong>Product</strong><br>Get the product the browser reports for itself.  This may be inaccurate for backwards compatibility reasons, e.g. Google Chrome reports its product as <em>Gecko</em>.</p><p><strong>UserAgent</strong><br>Return the full user agent string for the browser, e.g. <em>Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.7 (KHTML, like Gecko) Chrome/16.0.912.63</em>.</p><p><strong>Vendor</strong><br>Get the vendor the browser reports for itself, e.g. <em>Google Inc.</em> for Google Chrome.</p><p><strong>Version</strong><br>Get the version the browser reports for itself as a string.  This can simply be a subset of the user agent string.</p><p><strong>Bandwidth</strong><br>The estimated available bandwidth in megabits per second of the detected connection technology. Note this may not be a reliable value - for example if the browser detects it is connected via Ethernet it may report the estimated Ethernet bandwidth, whereas further up the network is a router with a lower bandwidth. If the bandwidth is unknown, it returns positive infinity.</p><p><strong>ConnectionType</strong><br>The type of connection technology in use if it is known. This can be <em>"bluetooth"</em>, <em>"cellular"</em>, <em>"ethernet"</em>, <em>"wifi"</em>, <em>"wimax"</em>, <em>"other"</em>, <em>"unknown"</em> or <em>"none"</em> (indicating offline mode).</p><p><strong>DevicePixelRatio</strong><br>The number of physical display pixels per CSS pixel. This can be a useful indicator of display density. For example, 'retina' displays report the value as 2, whereas ordinary displays report the value as 1.</p><p><strong>ScreenWidth</strong><br><strong>ScreenHeight</strong><br>Retrieve the dimensions of the entire device screen. This is the complete display area available to the operating system.</p><p><strong>Title</strong><br>The current HTML document's title.</p><p><strong>Domain</strong><br>The current domain, e.g. <em>scirra.com</em>.</p><p><strong>Hash</strong><br>The string after the hash at the end of the URL, including the hash.  For example, if the current URL is <em>http://scirra.com/mygame/index.html#teapot</em>, this returns <em>#teapot</em>.</p><p><strong>PathName</strong><br>The path relative to the domain in the URL.  For example the path name of <em>http://scirra.com/mygame/index.html#teapot</em> is <em>/mygame/index.html</em>.</p><p><strong>Protocol</strong><br>The current protocol, usually either <em>http:</em> or <em>https:</em>.</p><p><strong>QueryParam</strong><br>Return a query string parameter by name.  For example, if the URL ends with <em>index.html?foo=bar&baz=wan</em>, <em>QueryParam("foo")</em> returns <em>bar</em> and <em>QueryParam("baz")</em> returns <em>wan</em>.</p><p><strong>QueryString</strong><br>Return the full URL query string including the question mark.  For example, if the URL ends with <em>index.html?foo=bar&baz=wan</em>, this returns <em>?foo=bar&baz=wan</em>.</p><p><strong>Referrer</strong><br>Get the previous page that linked to this page, if any.</p><p><strong>URL</strong><br>Get the complete current URL in the browser address bar, including the protocol.</p>
+            
+
+
+            
+                <h2 class="l">Tags:</h2>
+                <ul class="tag-list">
+                    <li><a title="" href="../../tags/247/browser">Browser</a></li><li><a title="If you want to make games Construct 2 is the tool of choice. Create games and share them. No programming required, and games created are exported to HTML5. Make a game in Construct 2." href="../../tags/77/construct2">Construct2</a></li><li><a title="The Construct 2 manual/documentation is a valuable reference for anyone wanting to make an HTML5 game in Construct 2 the game creator. The official documentation is a comprehensive guide." href="../../tags/162/manual">Manual</a></li><li><a title="Reference refers to a resource that can be used to reference functions of Construct 2 the game making program. References are useful for quickly obtaining desired information." href="../../tags/214/reference">Reference</a></li>
+                </ul>
+            
+
+            <div class="social-footer">
+                <h3>Now get to know us a little better</h3>
+                <ul>
+                    <li><div class="g-plusone" data-size="tall" data-href="https://plus.google.com/105404553461194404336"></div></li>
+                    <li style="padding-top:15px;"><a href="https://twitter.com/Scirra" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @Scirra</a></li>
+                    <li><iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FScirraOfficial&amp;send=false&amp;layout=box_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=tahoma&amp;height=90&amp;appId=140276622761263" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:45px; height:90px;" allowTransparency="true"></iframe></li>
+                </ul>
+            </div>
+        </div>
+        
+        <a></a><a></a>
+
+        <div class="clear"></div>
+    </div>
+
+    
+    <footer>
+        <div class="footer-tear"></div>
+        <div class="footer-wrap">
+            <div class="content-wrap">
+                <ul>
+                    <li>
+                        <h2>Make Games</h2>
+                        <ul>
+                            <li><a href="../../construct2">Construct 2</a></li>
+                            <li><a href="../../construct2/releases">Download Construct 2</a></li>
+                            <li><a href="../../store/construct-2">Pricing</a></li>
+                            <li><a href="../../store/construct-2">Compare Features</a></li>
+                            <li><a href="../../manual">Online Manual</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2>Play Games</h2>
+                        <ul>
+                            <li><a href="../../arcade">Arcade</a></li>
+                            <li><a href="../../arcade/submit">Upload a Game</a></li>
+                            <li><a href="../../forum/arcade_forum48.html">Discuss</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2>Download</h2>
+                        <ul>
+                            <li><a id="LatestStableLink" href="../../construct2/releases/r212.2">Stable Release (r212.2)</a></li>
+                            <li><a id="LatestBetaLink" href="../../construct2/releases/r214">Beta Release (r214)</a></li>
+                        </ul>
+                        <div class="total-dl-wrap" title="Construct 2 has been downloaded 2,546,163 times to date"><div class="ch">2</div><div class="chs"></div><div class="ch">5</div><div class="ch">4</div><div class="ch">6</div><div class="chs"></div><div class="ch">1</div><div class="ch">6</div><div class="ch">3</div><p title="Aggregate total from Scirra.com website and large distributors">Total downloads</p></div>
+                        <h2 style="margin-top:5px;margin-bottom:0px;">Game Assets</h2>
+                        <ul>
+                            <li><a href="http://www.scirra.com/freebundle.zip" target="_blank">Free Bundle (34mb)</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2>Community</h2>
+                        <ul>
+                            <li><a href="../../blog">Blog</a></li>
+                            <li><a href="../../forum">Forums</a></li>
+                            <li><a href="../../tutorials">Tutorials</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2>About Scirra</h2>
+                        <ul>
+                            <li><a href="../../about">About Scirra</a></li>
+                            <li><a href="../../careers">Careers</a></li>
+                            <li><a href="../../contact">Contact Us</a></li>
+                            <li><a href="../../press-kit">Press Kit</a></li>
+                            <li><a href="../../people">The Team</a></li>
+                            <li><a href="../../privacy-policy">Privacy Policy</a></li>
+                            <li><a href="../../terms-and-conditions">Terms and Conditions</a></li>
+                            <li><a href="../../sitemap">Site Map</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+                
+                <div class="footer-item-wrap">
+                    <div>
+                         <a href="../../"><img src="//static3.scirra.net/images/fresh/footer-scirra-logo-01.png" width="177" height="44" alt="Scirra Logo"/></a>
+                    </div>
+                    <div class="address">
+                        Scirra Ltd, Studio 117, The Lightbulb<br />1 Filament Walk, London, SW18 4GQ
+                    </div>
+                    <div class="postcard">
+                        <a href="../../badges/45/postcard">Send us a postcard!</a>
+                    </div>
+                    <div>
+                       <ul>
+                            <li><a href="https://www.facebook.com/ScirraOfficial" target="_blank"><img src="//static2.scirra.net/images/fresh/footer-facebook-icon-01.png" width="34" height="35"/></a></li>
+                            <li><a href="https://twitter.com/scirra" target="_blank"><img src="//static1.scirra.net/images/fresh/footer-twitter-icon-01.png" width="34" height="35"/></a></li>
+                            <li><a href="https://plus.google.com/105404553461194404336/posts" target="_blank"><img src="//static2.scirra.net/images/fresh/footer-google-plus-icons-01.png" width="34" height="35"/></a></li>
+                       </ul>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="copyright">Copyright &copy; 2015 Scirra Ltd, All rights reserved.</div>
+
+            </div>
+        </div>
+    </footer>
+    
+     <script>
+         var RelPath = "../../";
+         var Domainroot = "http://www.scirra.com";
+     </script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="//static4.scirra.net/js/common.js?v=20"></script> 
+    <script type="text/javascript">
+
+        var alertsMarked = false;
+        var loadedUserDropdown = false;
+        var loadedAlertsDropdown = false;
+
+        $(document).ready(function () {
+            
+
+
+            $('#fblikeframe').html('<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.scirra.com&send=false&layout=button_count&width=150&show_faces=true&action=like&colorscheme=light&font&height=21&appId=197624256970598" height="21" scrolling="no" frameborder="0" allowTransparency="true"></iframe>');
+            !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } } (document, "script", "twitter-wjs");
+
+            $('#AlertBoxLink').click(function () {
+
+                if ($('#AlertsDropDown').is(':visible')) {
+                    hideAlertsDropDown();
+                } else {
+                    showAlertsDropDown();
+                    hideUserDropDown();
+                }
+                return false;
+            });
+
+            $('#UserDropdownLink').click(function () {
+
+                if ($('#UserDropDown').is(':visible')) {
+                    hideUserDropDown();
+                } else {
+                    showUserDropDown();
+                    hideAlertsDropDown();
+                }
+                return false;
+            });
+            function hideUserDropDown() {
+                $('#UserDropDown').slideUp('fast');
+            }
+
+            function showAlertsDropDown() {
+
+                if (!loadedAlertsDropdown) {
+
+                    $.ajax({
+                        dataType: "json",
+                        url: "https://www.scirra.com/handlers/fresh/getuseralertsdropdown.ashx",
+                        data: "",
+                        success: function (json) {
+
+                            var alertHTML = "";
+
+                            $.each(json.recentalerts, function (i, item) {
+                                var cssClass = "alert";
+                                if (json.recentalerts[i].read === "1") cssClass += " red-alert";
+                                alertHTML += "<div class=\"alert\">" +
+                                             "<img src=\"" + json.recentalerts[i].typeicon + "\" width=\"" + json.recentalerts[i].typeiconwidth + "\" height=\"" + json.recentalerts[i].typeiconheight + "\">" +
+                                             "<a class=\"" + cssClass + "\" style=\"padding-left:0;\" href=\"https://www.scirra.com" + json.recentalerts[i].url + "\">" +
+                                             json.recentalerts[i].title + "</a>" +
+                                             "<p><em>" + json.recentalerts[i].message + "</em></p>" +
+                                            "<div class=\"alert-timeago\">" + json.recentalerts[i].date + "</div>" +
+                                            "<div class=\"clear\"></div></div><div class=\"hr\"></div>";
+
+                            });
+
+                            $('#alerthtmlwrap').html(alertHTML);
+                        }
+                    });
+
+                    loadedAlertsDropdown = true;
+                }
+
+                $('#AlertsDropDown').slideDown('fast');
+
+
+            }
+
+
+            function showUserDropDown() {
+
+                if (!loadedUserDropdown) {
+                    $.ajax({
+                        dataType: "json",
+                        url: "https://www.scirra.com/handlers/fresh/getuserdropdowndetails.ashx?userID=0",
+                        data: "",
+                        success: function(json) {
+
+                            $('#MyProfileLink').attr("href", "https://www.scirra.com/users/" + json.seousername);
+                            $('#DropDownAvatar').attr("src", json.avatar);
+
+                            var newPMs = parseInt(json.unreadpms);
+                            if (newPMs === 0) {
+                                $('#DropDownInbox').html("Inbox (0)");
+                            } else {
+                                $('#DropDownInbox').html("Inbox <strong>(" + newPMs + ")</strong>");
+                            }
+
+                            var sellerID = parseInt(json.sellerid);
+                            
+                            if (sellerID != 0) {
+                                $('#DropDownSellerLink').attr("style", "");
+                            }
+
+                            $('#DropDownBadges').html("<div class=\"medal gold\"></div> " + json.goldbadges + " <div class=\"medal silver\"></div> " + json.silverbadges + " <div class=\"medal bronze\"></div> " + json.bronzebadges);
+                            $('#DropDownRep').html(json.reputation);
+                        }
+                    });
+                    loadedUserDropdown = true;
+                }
+
+                $('#UserDropDown').slideDown('fast');
+            }
+
+
+            $('#UserDropDown').click(function (event) {
+                event.stopPropagation();
+            });
+            $('#AlertsDropDown').click(function (event) {
+                event.stopPropagation();
+            });
+            
+            $('body').click(function (e) {
+                hideUserDropDown();
+                hideAlertsDropDown();
+            });
+
+        });
+        
+        function hideAlertsDropDown() {
+            $('#AlertsDropDown').slideUp('fast');
+        }
+
+
+
+
+        function plusone_callback(response) {
+            $.ajax({
+                url: RelPath + "handlers/gp1.ashx?o=" + response.state + "&u=" + response.href,
+                context: document.body,
+                success: function () {
+                    $(this).addClass("done");
+                }
+            });
+
+        }
+
+    </script>
+    <script src="//apis.google.com/js/plusone.js"></script>
+
+    
+    <script>
+        var defaultSearchTxt = "Search manual...";
+        $(document).ready(function () {
+
+            if ($('#ManualSearch').val() == "")
+                $('#ManualSearch').val(defaultSearchTxt);
+            $('#ManualSearch').focus(function () {
+                if ($('#ManualSearch').val() == defaultSearchTxt)
+                    $('#ManualSearch').val("");
+                $('#ManualSearch').css("color", "#666");
+            });
+            $('#ManualSearch').blur(function () {
+                if ($.trim($('#ManualSearch').val()) == "")
+                    $('#ManualSearch').val(defaultSearchTxt);
+                $('#ManualSearch').css("color", "#E5E4E2");
+            });
+
+        });
+    </script>
+     <script>
+            SyntaxHighlighter.all();
+    </script>
+
+    
+    <script>
+        function selectManualCategory(catID) {
+            alert(catID);
+        }
+    </script>
+
+
+    
+    
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-21804850-2']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+        function plusone_callback(response) {
+            $.ajax({
+                url: RelPath + "handlers/gp1.ashx?o=" + response.state + "&u=" + response.href,
+                context: document.body,
+                success: function () {
+
+                }
+            });
+        }
+
+
+
+
+    </script>
+
+    </form>
+
+</body>
+</html>

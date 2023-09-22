@@ -1,0 +1,455 @@
+
+
+<!DOCTYPE html>
+<html lang="en" runat="server" >
+    
+<head><meta charset="UTF-8" /><link rel="shortcut icon" href="//static4.scirra.net/images/fresh/scirra-favicon-02.ico" /><link rel="apple-touch-icon" href="//static4.scirra.net/images/fresh/scirra-favicon-57px-01.png" /><link href="//fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css" /><link href="//fonts.googleapis.com/css?family=Sansita+One" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="//static3.scirra.net/css/fresh.css?v=167" />
+    
+    
+    <title>Button - Construct 2 Manual</title>
+    <link href="https://www.scirra.com/manual/111/button" rel="canonical" />
+    <script src='//static2.scirra.net/js/shcore.js?v=20' type='text/javascript'></script>
+    <script src='//static1.scirra.net/js/shbrushjscript.js?v=20' type='text/javascript'></script>
+    <link rel="stylesheet" href="//static1.scirra.net/css/shcore.css?v=167" />
+    <link rel="stylesheet" href="//static3.scirra.net/css/shthemedefault.css?v=167" />
+    <link rel="stylesheet" href="//static4.scirra.net/css/freshmanual.css?v=167" />
+<meta name="viewport" content="width=1024" /><meta name="theme-color" content="#06c3ab" /><title>
+
+</title></head>
+<body>
+    
+    <form method="post" action="button?ID=111&amp;&amp;bodypage=1" id="Form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="F75732CA" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="bGeSUIi82iWhj0bgo/licvxy+VkiADXQrxjG4GFLDASZacLWSYNWI5Sat8e+KCGuN9lKhnz5SY7KrYAbrYxTBkRGh/uirQsun/atD7hvAG83Aaxb" />
+</div>
+  
+    <header>
+        
+    
+
+
+<div class="menu-wrapper">
+    <div class="content-wrap">
+        
+            <a class="topmenu-logo" href="https://www.scirra.com"><img src="//static4.scirra.net/images/fresh/scirra-logo-small-01.png" width="101" height="28" alt="Scirra Logo Small"/></a>
+        
+        <ul>
+            <li ><a href="https://www.scirra.com/construct2">Construct 2</a></li>
+            <li  class="selected"><a href="https://www.scirra.com/manual">Manual</a></li>
+            <li ><a href="https://www.scirra.com/tutorials">Tutorials</a></li><li class="split"></li>
+            <li ><a href="https://www.scirra.com/store">Store</a></li><li class="split"></li>
+            <li ><a href="https://www.scirra.com/arcade">Arcade</a></li><li class="split"></li>
+            <li ><a href="https://www.scirra.com/blog">Blog</a></li><li class="split"></li>
+            <li ><a href="https://www.scirra.com/forum">Forums</a></li><li class="split"></li>
+            <li ><a href="https://www.scirra.com/education">Education</a></li><li class="split"></li>
+        </ul>
+        
+            <div class="guest-panel">
+                <a href="https://www.scirra.com/register" title="Create a Scirra account">Register</a> or <a href="https://www.scirra.com/login" title="Login to your Scirra account">Login</a>
+            </div>
+        
+        
+        <div class="clear"></div>
+        
+        
+        
+        <div id="AlertsDropDown" class="alerts-dropdown">
+	
+            <div class="dropdown-tip"></div>
+            <div class="dropdown-links c sm">
+                <a href="https://www.scirra.com/alerts">View All Alerts</a>
+            </div>
+            <div class="hr"></div>
+
+            <div id="alerthtmlwrap"></div>
+
+        
+</div>
+
+    </div>
+</div>
+
+        <div class="content-wrap">
+
+        </div>
+    </header>
+
+    
+    <div class="clear"></div>
+    
+    
+    <div class="content-wrap">
+        
+        
+
+<div class="sub-menu">
+    <ul>
+        <li class="selected"><a href="../1/construct-2">Construct 2</a></li><li><a href="../15/sdk">SDK</a></li><li><a href="../search">Search Manual</a></li><li><a href="../../manual.zip">Download Manual</a></li>
+    </ul>
+</div>
+        
+        <div class="left-menu">
+            
+            <input name="ctl00$BodyContent$ManualSearch" type="text" id="ManualSearch" class="ManualSearchBox" />
+
+            <a class="header" href="../2/installing" title="Overview of the installation section."><span class="arr">▶</span>Installing</a><a class="header" href="../10/overview" title="Overview of Construct 2."><span class="arr">▶</span>Overview</a><a class="header" href="../36/interface" title=""><span class="arr">▶</span>Interface</a><a class="header" href="../65/project-primitives" title=""><span class="arr">▶</span>Project primitives</a><a class="header" href="../86/behavior-reference" title=""><span class="arr">▶</span>Behavior Reference</a><a class="header" href="../106/plugin-reference" title=""><span class="arr">▼</span>Plugin reference</a><ul class="submenu-level-0 "><li><a  href="../130/common-features" title=""><span class="arr">▶</span>Common features</a><ul class="submenu-level-1 hidden-menu"><li><a  href="../131/common-conditions" title="">Common conditions</a></li><li><a  href="../132/common-actions" title="">Common actions</a></li><li><a  href="../133/common-expressions" title="">Common expressions</a></li></ul></li><li><a  href="../151/9-patch" title="">9-patch</a></li><li><a  href="../184/admob" title="">AdMob</a></li><li><a  href="../107/ajax" title="">AJAX</a></li><li><a  href="../108/array" title="">Array</a></li><li><a  href="../109/audio" title="">Audio</a></li><li><a  href="../110/browser" title="">Browser</a></li><li><a  class="selected"  href="button" title="">Button</a></li><li><a  href="../140/dictionary" title="">Dictionary</a></li><li><a  href="../112/facebook" title="">Facebook</a></li><li><a  href="../182/file-chooser" title="">File chooser</a></li><li><a  href="../149/function" title="">Function</a></li><li><a  href="../186/game-center" title="">Game Center</a></li><li><a  href="../143/gamepad" title="">Gamepad</a></li><li><a  href="../164/geolocation" title="">Geolocation</a></li><li><a  href="../175/google-play" title="">Google Play</a></li><li><a  href="../187/iad" title="">iAd</a></li><li><a  href="../173/iap" title="">IAP</a></li><li><a  href="../138/intel-agi" title="">Intel AGI</a></li><li><a  href="../113/keyboard" title="">Keyboard</a></li><li><a  href="../136/kongregate" title="">Kongregate</a></li><li><a  href="../155/list" title="">List</a></li><li><a  href="../188/local-storage" title="">Local Storage</a></li><li><a  href="../114/mouse" title="">Mouse</a></li><li><a  href="../174/multiplayer" title="">Multiplayer</a></li><li><a  href="../162/nwjs" title="">NW.js</a></li><li><a  href="../135/particles" title="">Particles</a></li><li><a  href="../180/progress-bar" title="">Progress bar</a></li><li><a  href="../185/pubcenter" title="">pubCenter</a></li><li><a  href="../159/scirra-arcade" title="">Scirra Arcade</a></li><li><a  href="../178/shadow-light" title="">Shadow light</a></li><li><a  href="../179/slider-bar" title="">Slider bar</a></li><li><a  href="../115/sprite" title="">Sprite</a></li><li><a  href="../166/sprite-font" title="">Sprite font</a></li><li><a  href="../116/text" title="">Text</a></li><li><a  href="../117/textbox" title="">Textbox</a></li><li><a  href="../118/tiled-background" title="">Tiled Background</a></li><li><a  href="../172/tilemap" title="">Tilemap</a></li><li><a  href="../119/touch" title="">Touch</a></li><li><a  href="../176/twitter" title="">Twitter</a></li><li><a  href="../144/user-media" title="">User Media</a></li><li><a  href="../181/video" title="">Video</a></li><li><a  href="../153/websocket" title="">WebSocket</a></li><li><a  href="../120/webstorage" title="">WebStorage</a></li><li><a  href="../145/windows-8" title="">Windows 8</a></li><li><a  href="../139/xml" title="">XML</a></li></ul><a class="header" href="../123/system-reference" title=""><span class="arr">▶</span>System reference</a>
+
+
+            
+            <div class="c">
+                
+                <h3>Download the Manual</h3>
+                <a href="../../manual.zip" id="A1" title="Construct 2 Manual"><img style="margin-top:15px;" src="//static1.scirra.net/images/manual-cover-small.png" width="151" height="237"/></a><br/>
+                <a href="../../manual.zip" title="Construct 2 Manual">Download the Official Construct 2 Manual (2.2mb)</a>
+
+                <h3>Latest Manual Students</h3>
+                <div style="margin-top:10px;">
+                    
+                </div>
+                <div class="clear"></div>
+                <p style="font-size:12px">For people who've read <a id="StudentBadgeLink" href="../../badges/18/manual-student">at least 20 entries</a>!</p>
+            </div>
+        </div>
+        <div class="inner-content-wrap">
+            
+            <h1>Button</h1>
+            
+            
+
+            <p><p>The <strong>Button</strong> object creates a form button which the user can click to perform an action.  It can also be set to be a <strong>checkbox</strong>.  Below shows both modes of the Button object in Google Chrome: a push button on the left, and a checkbox on the right.</p><p><img src="//www.scirra.com/images/articles/buttontypes.png"  alt="Button types"   width="213" height="63"  /></p><p>Form controls are actual HTML elements floating above the game canvas in the HTML page.  Therefore, nothing can be displayed on top of a form control, apart from other form controls.</p><p>Form controls position themselves according to the layer parallax, scale and so on.  However they are not truly "in the game" (since they float above), so it is recommended to avoid using scrolling, parallax and layer scaling with form controls, otherwise the end result can feel unnatural.</p><h3>Styling Button objects</h3><p>Button controls can be customised in a huge number of ways via CSS (Cascading Style Sheets).  Rather than adding actions to set all of the possible properties, the Button object exposes a <em>Set CSS style</em> action.  Knowing CSS will of course be an advantage here, but it is simple to use for simple properties.  A few examples are listed below.</p><p><em>Make the text red:</em> Set "color" to "red"<br><em>Make the background yellow:</em> Set "background-color" to "yellow"<br><em>Make the border a thick light grey:</em> Set "border" to "3px solid #AAAAAA"<br><em>Make the font bigger:</em> Set "font-size" to "2em"<br><em>Make a dashed red border:</em> Set "border" to "2px dashed red"</p><h3>Button properties</h3><p><strong>Type</strong><br>Either <em>Button</em> for a push-button or <em>Checkbox</em> for a checked/unchecked control.  See the image above for a demonstration of both types.</p><p><strong>Text</strong><br>The text appearing on the button face or checkbox label.</p><p><strong>Tooltip</strong><br>A tooltip that appears in most browsers if the user hovers the mouse over the button and waits.  Leave blank for no tooltip.</p><p><strong>Initial visibility</strong><br>Whether or not the button is shown on startup.  If <em>Invisible</em>, the button must be shown with the <em>Set visible</em> action.</p><p><strong>Enabled</strong><br>Whether the button is initially enabled.  If <em>No</em>, the button will be greyed out and cannot be pushed.</p><p><strong>Auto font size</strong><br>Automatically set the font-size property of the element according to the layout and layer scale.  This will prevent the font-size CSS property being manually set with the <em>Set CSS style</em> action.  Set to <em>No</em> if you intend to use <em>Set CSS style</em> to adjust the font-size property.</p><p><strong>ID</strong> (optional)<br>An optional <em>id</em> attribute for the element in the DOM (Document Object Model).  This can be useful for accessing the element's value from external scripts, or styling with CSS in the HTML page.</p><p><strong>Checked</strong><br>If <em>Type</em> is <em>Checkbox</em>, this is the initial check state of the control.</p><h3>Button conditions</h3><p><strong>Is checked</strong><br>If <em>Type</em> is <em>Checkbox</em>, is true if the control is currently checked.</p><p><strong>On clicked</strong><br>Triggered when the user pushes the button or checks/unchecks the control, either by keyboard, mouse or touch input.</p><h3>Button actions</h3><p><strong>Set CSS style</strong><br>Set a CSS (Cascading Style Sheets) style on the Button element.  For more information, see the section <em>Styling Button objects</em>.  Note that if the <em>Auto font size</em> property is set to <em>Yes</em>, any changes to the font-size property will be overridden.</p><p><strong>Set checked</strong><br>If <em>Type</em> is <em>Checkbox</em>, set the current check state of the control.</p><p><strong>Set enabled</strong><br>Set the button enabled or disabled.  When disabled, the button appears greyed out and cannot be pushed.</p><p><strong>Set focused</strong><br>Set the input focus to the button.</p><p><strong>Set text</strong><br>Set the text on the button face.</p><p><strong>Set tooltip</strong><br>Set the text that appears for the button tooltip.  Leave blank for no tooltip.</p><p><strong>Set unfocused</strong><br>Remove the input focus from the button.</p><p><strong>Toggle checked</strong><br>If <em>Type</em> is <em>Checkbox</em>, toggles the check state of the control.</p><h3>Button expressions</h3><p>The Button object does not have any of its own expressions.</p></p>
+            
+
+
+            
+                <h2 class="l">Tags:</h2>
+                <ul class="tag-list">
+                    <li><a title="" href="../../tags/248/button">Button</a></li><li><a title="If you want to make games Construct 2 is the tool of choice. Create games and share them. No programming required, and games created are exported to HTML5. Make a game in Construct 2." href="../../tags/77/construct2">Construct2</a></li><li><a title="The Construct 2 manual/documentation is a valuable reference for anyone wanting to make an HTML5 game in Construct 2 the game creator. The official documentation is a comprehensive guide." href="../../tags/162/manual">Manual</a></li><li><a title="Reference refers to a resource that can be used to reference functions of Construct 2 the game making program. References are useful for quickly obtaining desired information." href="../../tags/214/reference">Reference</a></li>
+                </ul>
+            
+
+            <div class="social-footer">
+                <h3>Now get to know us a little better</h3>
+                <ul>
+                    <li><div class="g-plusone" data-size="tall" data-href="https://plus.google.com/105404553461194404336"></div></li>
+                    <li style="padding-top:15px;"><a href="https://twitter.com/Scirra" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @Scirra</a></li>
+                    <li><iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2FScirraOfficial&amp;send=false&amp;layout=box_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font=tahoma&amp;height=90&amp;appId=140276622761263" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:45px; height:90px;" allowTransparency="true"></iframe></li>
+                </ul>
+            </div>
+        </div>
+        
+        <a></a><a></a>
+
+        <div class="clear"></div>
+    </div>
+
+    
+    <footer>
+        <div class="footer-tear"></div>
+        <div class="footer-wrap">
+            <div class="content-wrap">
+                <ul>
+                    <li>
+                        <h2>Make Games</h2>
+                        <ul>
+                            <li><a href="../../construct2">Construct 2</a></li>
+                            <li><a href="../../construct2/releases">Download Construct 2</a></li>
+                            <li><a href="../../store/construct-2">Pricing</a></li>
+                            <li><a href="../../store/construct-2">Compare Features</a></li>
+                            <li><a href="../../manual">Online Manual</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2>Play Games</h2>
+                        <ul>
+                            <li><a href="../../arcade">Arcade</a></li>
+                            <li><a href="../../arcade/submit">Upload a Game</a></li>
+                            <li><a href="../../forum/arcade_forum48.html">Discuss</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2>Download</h2>
+                        <ul>
+                            <li><a id="LatestStableLink" href="../../construct2/releases/r212.2">Stable Release (r212.2)</a></li>
+                            <li><a id="LatestBetaLink" href="../../construct2/releases/r214">Beta Release (r214)</a></li>
+                        </ul>
+                        <div class="total-dl-wrap" title="Construct 2 has been downloaded 2,546,163 times to date"><div class="ch">2</div><div class="chs"></div><div class="ch">5</div><div class="ch">4</div><div class="ch">6</div><div class="chs"></div><div class="ch">1</div><div class="ch">6</div><div class="ch">3</div><p title="Aggregate total from Scirra.com website and large distributors">Total downloads</p></div>
+                        <h2 style="margin-top:5px;margin-bottom:0px;">Game Assets</h2>
+                        <ul>
+                            <li><a href="http://www.scirra.com/freebundle.zip" target="_blank">Free Bundle (34mb)</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2>Community</h2>
+                        <ul>
+                            <li><a href="../../blog">Blog</a></li>
+                            <li><a href="../../forum">Forums</a></li>
+                            <li><a href="../../tutorials">Tutorials</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h2>About Scirra</h2>
+                        <ul>
+                            <li><a href="../../about">About Scirra</a></li>
+                            <li><a href="../../careers">Careers</a></li>
+                            <li><a href="../../contact">Contact Us</a></li>
+                            <li><a href="../../press-kit">Press Kit</a></li>
+                            <li><a href="../../people">The Team</a></li>
+                            <li><a href="../../privacy-policy">Privacy Policy</a></li>
+                            <li><a href="../../terms-and-conditions">Terms and Conditions</a></li>
+                            <li><a href="../../sitemap">Site Map</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+                
+                <div class="footer-item-wrap">
+                    <div>
+                         <a href="../../"><img src="//static3.scirra.net/images/fresh/footer-scirra-logo-01.png" width="177" height="44" alt="Scirra Logo"/></a>
+                    </div>
+                    <div class="address">
+                        Scirra Ltd, Studio 117, The Lightbulb<br />1 Filament Walk, London, SW18 4GQ
+                    </div>
+                    <div class="postcard">
+                        <a href="../../badges/45/postcard">Send us a postcard!</a>
+                    </div>
+                    <div>
+                       <ul>
+                            <li><a href="https://www.facebook.com/ScirraOfficial" target="_blank"><img src="//static2.scirra.net/images/fresh/footer-facebook-icon-01.png" width="34" height="35"/></a></li>
+                            <li><a href="https://twitter.com/scirra" target="_blank"><img src="//static1.scirra.net/images/fresh/footer-twitter-icon-01.png" width="34" height="35"/></a></li>
+                            <li><a href="https://plus.google.com/105404553461194404336/posts" target="_blank"><img src="//static2.scirra.net/images/fresh/footer-google-plus-icons-01.png" width="34" height="35"/></a></li>
+                       </ul>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="copyright">Copyright &copy; 2015 Scirra Ltd, All rights reserved.</div>
+
+            </div>
+        </div>
+    </footer>
+    
+     <script>
+         var RelPath = "../../";
+         var Domainroot = "http://www.scirra.com";
+     </script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="//static4.scirra.net/js/common.js?v=20"></script> 
+    <script type="text/javascript">
+
+        var alertsMarked = false;
+        var loadedUserDropdown = false;
+        var loadedAlertsDropdown = false;
+
+        $(document).ready(function () {
+            
+
+
+            $('#fblikeframe').html('<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.scirra.com&send=false&layout=button_count&width=150&show_faces=true&action=like&colorscheme=light&font&height=21&appId=197624256970598" height="21" scrolling="no" frameborder="0" allowTransparency="true"></iframe>');
+            !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } } (document, "script", "twitter-wjs");
+
+            $('#AlertBoxLink').click(function () {
+
+                if ($('#AlertsDropDown').is(':visible')) {
+                    hideAlertsDropDown();
+                } else {
+                    showAlertsDropDown();
+                    hideUserDropDown();
+                }
+                return false;
+            });
+
+            $('#UserDropdownLink').click(function () {
+
+                if ($('#UserDropDown').is(':visible')) {
+                    hideUserDropDown();
+                } else {
+                    showUserDropDown();
+                    hideAlertsDropDown();
+                }
+                return false;
+            });
+            function hideUserDropDown() {
+                $('#UserDropDown').slideUp('fast');
+            }
+
+            function showAlertsDropDown() {
+
+                if (!loadedAlertsDropdown) {
+
+                    $.ajax({
+                        dataType: "json",
+                        url: "https://www.scirra.com/handlers/fresh/getuseralertsdropdown.ashx",
+                        data: "",
+                        success: function (json) {
+
+                            var alertHTML = "";
+
+                            $.each(json.recentalerts, function (i, item) {
+                                var cssClass = "alert";
+                                if (json.recentalerts[i].read === "1") cssClass += " red-alert";
+                                alertHTML += "<div class=\"alert\">" +
+                                             "<img src=\"" + json.recentalerts[i].typeicon + "\" width=\"" + json.recentalerts[i].typeiconwidth + "\" height=\"" + json.recentalerts[i].typeiconheight + "\">" +
+                                             "<a class=\"" + cssClass + "\" style=\"padding-left:0;\" href=\"https://www.scirra.com" + json.recentalerts[i].url + "\">" +
+                                             json.recentalerts[i].title + "</a>" +
+                                             "<p><em>" + json.recentalerts[i].message + "</em></p>" +
+                                            "<div class=\"alert-timeago\">" + json.recentalerts[i].date + "</div>" +
+                                            "<div class=\"clear\"></div></div><div class=\"hr\"></div>";
+
+                            });
+
+                            $('#alerthtmlwrap').html(alertHTML);
+                        }
+                    });
+
+                    loadedAlertsDropdown = true;
+                }
+
+                $('#AlertsDropDown').slideDown('fast');
+
+
+            }
+
+
+            function showUserDropDown() {
+
+                if (!loadedUserDropdown) {
+                    $.ajax({
+                        dataType: "json",
+                        url: "https://www.scirra.com/handlers/fresh/getuserdropdowndetails.ashx?userID=0",
+                        data: "",
+                        success: function(json) {
+
+                            $('#MyProfileLink').attr("href", "https://www.scirra.com/users/" + json.seousername);
+                            $('#DropDownAvatar').attr("src", json.avatar);
+
+                            var newPMs = parseInt(json.unreadpms);
+                            if (newPMs === 0) {
+                                $('#DropDownInbox').html("Inbox (0)");
+                            } else {
+                                $('#DropDownInbox').html("Inbox <strong>(" + newPMs + ")</strong>");
+                            }
+
+                            var sellerID = parseInt(json.sellerid);
+                            
+                            if (sellerID != 0) {
+                                $('#DropDownSellerLink').attr("style", "");
+                            }
+
+                            $('#DropDownBadges').html("<div class=\"medal gold\"></div> " + json.goldbadges + " <div class=\"medal silver\"></div> " + json.silverbadges + " <div class=\"medal bronze\"></div> " + json.bronzebadges);
+                            $('#DropDownRep').html(json.reputation);
+                        }
+                    });
+                    loadedUserDropdown = true;
+                }
+
+                $('#UserDropDown').slideDown('fast');
+            }
+
+
+            $('#UserDropDown').click(function (event) {
+                event.stopPropagation();
+            });
+            $('#AlertsDropDown').click(function (event) {
+                event.stopPropagation();
+            });
+            
+            $('body').click(function (e) {
+                hideUserDropDown();
+                hideAlertsDropDown();
+            });
+
+        });
+        
+        function hideAlertsDropDown() {
+            $('#AlertsDropDown').slideUp('fast');
+        }
+
+
+
+
+        function plusone_callback(response) {
+            $.ajax({
+                url: RelPath + "handlers/gp1.ashx?o=" + response.state + "&u=" + response.href,
+                context: document.body,
+                success: function () {
+                    $(this).addClass("done");
+                }
+            });
+
+        }
+
+    </script>
+    <script src="//apis.google.com/js/plusone.js"></script>
+
+    
+    <script>
+        var defaultSearchTxt = "Search manual...";
+        $(document).ready(function () {
+
+            if ($('#ManualSearch').val() == "")
+                $('#ManualSearch').val(defaultSearchTxt);
+            $('#ManualSearch').focus(function () {
+                if ($('#ManualSearch').val() == defaultSearchTxt)
+                    $('#ManualSearch').val("");
+                $('#ManualSearch').css("color", "#666");
+            });
+            $('#ManualSearch').blur(function () {
+                if ($.trim($('#ManualSearch').val()) == "")
+                    $('#ManualSearch').val(defaultSearchTxt);
+                $('#ManualSearch').css("color", "#E5E4E2");
+            });
+
+        });
+    </script>
+     <script>
+            SyntaxHighlighter.all();
+    </script>
+
+    
+    <script>
+        function selectManualCategory(catID) {
+            alert(catID);
+        }
+    </script>
+
+
+    
+    
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-21804850-2']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+        function plusone_callback(response) {
+            $.ajax({
+                url: RelPath + "handlers/gp1.ashx?o=" + response.state + "&u=" + response.href,
+                context: document.body,
+                success: function () {
+
+                }
+            });
+        }
+
+
+
+
+    </script>
+
+    </form>
+
+</body>
+</html>

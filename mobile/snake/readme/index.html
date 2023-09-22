@@ -1,0 +1,294 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<head lang="en">
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<title>Snake</title>
+	<!-- Framework CSS -->
+	<link rel="stylesheet" href="assets/blueprint-css/screen.css" type="text/css" media="screen, projection">
+	<link rel="stylesheet" href="assets/blueprint-css/print.css" type="text/css" media="print">
+	<link href="styles/shCore.css" rel="stylesheet" type="text/css" >
+	<link href="styles/shCoreDefault.css" rel="stylesheet" type="text/css" >
+	<link href="styles/shThemeDefault.css" rel="stylesheet" type="text/css" >
+	
+	<!--[if lt IE 8]><link rel="stylesheet" href="assets/blueprint-css/ie.css" type="text/css" media="screen, projection"><![endif]-->
+	<link rel="stylesheet" href="assets/blueprint-css/plugins/fancy-type/screen.css" type="text/css" media="screen, projection">
+	<style type="text/css" media="screen">
+		p, table, hr, .box { margin-bottom:25px; }
+		.box p { margin-bottom:10px; }
+	</style>
+	
+	<script type="text/javascript" src="scripts/shCore.js"></script>
+	<script type="text/javascript" src="scripts/shBrushJScript.js"></script>
+	<script type="text/javascript" src="scripts/shBrushXml.js"></script>
+</head>
+
+
+<body>
+	<div class="container">
+	
+		<h3 class="center alt">&ldquo;Snake&rdquo; Documentation by &ldquo;Code This Lab S.r.l.&rdquo; v1.0</h3>
+		
+		<hr>
+		
+		<h1 class="center">&ldquo;Snake&rdquo;</h1>
+		
+		<div class="borderTop">
+			<div class="span-6 colborder info prepend-1">
+				<p class="prepend-top">
+					<strong>
+					Created: 13/10/2015<br>
+					By: <a href="http://www.codethislab.com" target="_blank">Code This Lab S.r.l.</a><br>
+					Email: <a href="mailto:info@codethislab.com">info@codethislab.com</a>
+					</strong>
+				</p>
+			</div><!-- end div .span-6 -->		
+	
+			<div class="span-12 last">
+				<p class="prepend-top append-0">Thank you for purchasing our game. If you have any questions that are beyond the scope of this help file, please feel free to email via user page contact form <a href="http://codecanyon.net/user/codethislab">here</a>. Thanks so much!</p>
+			</div>
+		</div><!-- end div .borderTop -->
+		
+		<hr>
+		
+		<h2 id="toc" class="alt">Table of Contents</h2>
+		<ol class="alpha">
+			<li><a href="#desc">Description</a></li>
+			<li><a href="#start">Getting Started</a></li>
+			<li><a href="#htmlStructure">HTML Structure</a></li>
+			<li><a href="#cssFiles">CSS Files and Structure</a></li>
+			<li><a href="#javascript">Source Code</a></li>
+			<li><a href="#game_function">Game functions</a></li>
+			<li><a href="#events">Events</a></li>
+			<li><a href="#change_graphics">Change Graphic</a></li>
+			<li><a href="#enable_sound">Disable Sounds</a></li>
+		</ol>
+		
+		<hr>
+		
+		<h3 id="desc"><strong>A) Description</strong> - <a href="#toc">top</a></h3>
+		<p>Snake is a HTML5 Arcade Game. Play this coloured version of the classic game Snake!.<br>
+			The game containes two different game mode: <br>
+			- Survival Mode: try to survive as long as possible!<br>
+			- Adventure Mode: challenge 20 levels of increasing difficulty! <br>
+			
+			<br>
+			The ZIP package contains the game with 1920x1080 resolution that scales to fit the whole screen device<br>
+			Just warning that for very wide screens, the game may not be perfectly full screen.
+			The game is fully compatible with all most common mobile devices.<br>
+			Sounds are enabled for mobile but we can't grant full audio compatibility on all mobile devices due to some well-know issue between some mobile-browser and HTML5.
+			So if you want to avoid sound loading, please read <a href="#enable_sound">Enable Sound</a> section). <br>
+			<strong>WARNING:</strong> Sounds can't be enabled for Windows Phone as this kind of device have unsolved issues with 'audio' and 'video' tag.
+			
+		</p>
+		<hr>
+		
+		<h3 id="start"><strong>B)Getting Started</strong> - <a href="#toc">top</a></h3>
+			<p>To install the game just upload on your server the game folder live_demo.
+			
+			<ul>
+				<li><strong>Game Resize:</strong> All game resolution automatically center itself and fits on the screen thanks to the <strong>ctl_utils.js</strong> file. 
+				If you want to avoid this, comment this function in index.html file: </li>
+				<pre class="brush: js">
+					$(document).ready(function(){
+						//sizeHandler();
+					});
+				</pre>
+
+				<li> <strong>Localization:</strong> You can easily change game text for different languages, changing string in <strong>CLang.js</strong></li>
+				
+				<pre class="brush: js">
+					TEXT_GAMEOVER             = "YOU LOST";
+					TEXT_GAMEOVER_ADVENTURE   = "YOU HAVEN'T EATEN ALL THE TARGETS.";
+					TEXT_SCORE                = "YOUR SCORE IS: ";
+					TEXT_PAUSE                = "PAUSE";
+					TEXT_WIN                  = "YOU WON!!";
+					TEXT_SCORE_FOR_NEXT_LEVEL = "THE TARGETS ARE VISIBLE ON THE LEFT-HAND SIDE OF THE SCREEN ";
+					TEXT_TIME_FOR_NEXT_LEVEL  = " IN: ";
+					TEXT_DIFFICULTY = "CHOOSE MODE";
+					TEXT_LEVEL      = "CHOOSE LEVEL";
+					TEXT_SURVIVAL = "IN THIS GAME MODE YOU HAVE TO SURVIVE AS MUCH AS POSSIBLE";
+				</pre>
+			</ul>
+			</p>
+		<hr>
+		
+		<h3 id="htmlStructure"><strong>C)HTML Structure</strong> - <a href="#toc">top</a></h3>
+		<p>This game have the canvas tag in the body. The ready event into the body calls the main function of the game: CMain(). 
+		<br>The head section declares all the javascript functions of the game. The whole project uses a typical object-oriented approach.<br> 
+		In the init function there are 4 mapped <a href="#events">events</a> that can be useful eventually for stats</p>
+		
+		<pre class="brush: js">
+			<body  ondragstart="return false;" ondrop="return false;" >
+				  <script>
+				   $(document).ready(function(){
+							 $(oMain).on("game_start", function(evt) {
+									 //alert("game_start");
+							 });
+
+							 $(oMain).on("save_score", function(evt,iScore) {
+									 //alert("iScore: "+iScore);
+							 });
+
+							 $(oMain).on("restart", function(evt) {
+									 //alert("restart");
+							 });
+							 
+							 $(oMain).on("next_level", function(evt,iScore) {
+									 //alert("next_level: "+iScore);
+							 });
+						   });
+						
+				  </script>
+				  
+				<canvas id="canvas" class='ani_hack' width="1920" height="1080"> </canvas>
+			</body>
+		</pre>
+		<li><strong>Game option:</strong> You can easily customize game setting when creating a new instance of the game in <strong>index.html</strong> file</li>
+				<pre class="brush: js">
+					var oMain = new CMain({
+                                            time_fruit:10000,   //TIME IN MILLISECONDS FOR SPECIAL FRUIT APPEARANCE
+                                            apple_eat_adventure: 2, //NUMBER OF APPLES TO BE EATEN FOR SPAWNING THE SPECIAL FRUITS IN ADVENTURE MODE
+                                            apple_eat_survival:5,   //NUMBER OF APPLES TO BE EATEN FOR SPAWNING THE SPECIAL FRUIT IN SURVIVAL MODE
+                                            starting_speed_snake:300, //STARTING SNAKE SPEED . DECREASE THIS VALUE IF YOU WANT TO SPEED UP THE SNAKE.
+                                            level_time:60000         //TIME IN MILLISECONDS FOR EACH LEVEL IN ADVENTURE MODE.
+                                           });
+				</pre>
+		<hr>
+
+		<h3 id="cssFiles"><strong>D) CSS Files and Structure</strong> - <a href="#toc">top</a></h3>
+
+		<p>The game use two CSS files. The first one is a generic reset file. Many browser interpret the default behavior of html elements differently. By using a general reset CSS file, we can work round this. 
+		Keep in mind, that these values might be overridden somewhere else in the file.</p> 
+
+		<p>The second file contains all of the specific stylings for the canvas and some hack to be fully compatible with all most popular mobile devices</p>  
+
+		<hr>
+		
+		<h3 id="javascript"><strong>E) Source Code</strong> - <a href="#toc">top</a></h3>
+		
+		<p>This game contains:</p>
+		
+		<ol>
+			<li>jQuery</li>
+			<li>Our custom scripts</li>
+			<li>CreateJs plugin</li>
+		</ol>
+		  
+		<ol>
+			<li>jQuery is a Javascript library that greatly reduces the amount of code that you must write.</li>
+			<li>The game have the following js files:
+	
+			<ul>
+				<li>CMain: the main class called by the index file. <br>This file controls the sprite_lib.js file that manages the sprite loading, the loop game and initialize the canvas with the CreateJs library</li>
+				<li>ctl_utils: this file manages the canvas resize and its centering</li>
+				<li>sprite_lib: this class loads all images declared in the main class</li>
+				<li>settings: general game settings</li>
+				<li>CLang: global string variables for language localization</li>
+				<li>CPreloader: simple text preloader to show resources loading progress</li>
+				<li>CMenu: simple menu with the play button</li>
+				<li>CGfxButton: this class create a standard button</li>
+				<li>CToggle: this class create a standard toggle button</li>
+				<li>CTextButton: this class create a standard text button</li>
+				<li>CGame: this class manages the game logic</li>
+				<li>CInterface: this class controls game GUI that contains text and buttons</li>
+				<li>CCell: this class manages cell of the graphical grid</li>
+				<li>CLevelBut: this class manages the button in Choose Level Panel.</li>
+				<li>CEndPanel: this class manages the panel that is shown when the game is over</li>
+				<li>CLevelMenu: this class shows the panel where the user can choose the level.</li>
+				<li>CPausePanel: this class shows the pause panel.</li>
+				<li>CNextLevel: this class shows a panel when a level is complete.</li>
+			</ul>
+
+			</li>
+			<li>CreateJs is a suite of modular libraries and tools which work together to enable rich interactive content on open web technologies via HTML5.
+			</li>
+		</ol>
+		
+		<p>Resuming, the complete game flow is the following: </p>
+		<ol>
+			<li>The index.html file calls the CMain.js file after ready event is called</li>
+			<li>The main class calls CPreloader.js to init preloader text and start sprite loading</li>
+			<li>When all sprites contained in "/sprites" and "/sounds" folder are loaded, the main class removes the preloader and calls the CMenu.js file that shows the main menu</li>
+			<li>If the user click the Play button in main menu, the CLevelMenu.js file is loaded and user can select the level</li>
+			<li>After selected a level, the CGame.js class is called and game starts</li>	
+			<li>If the user click on the exit button in the up-right corner, the game returns to the menu screen</li>	
+		</ol>		
+		
+		<hr>
+		
+		<h3 id="game_function"><strong>F) Game functions</strong> - <a href="#toc">top</a></h3>
+			In this section will be explained all the most important functions used in <strong>CGame.js</strong> file. <br><br>
+		
+		<ul>
+			<li><strong>_init()</strong> <br>
+				This function attach on the canvas some game sprites like background (oBg)and the GUI. 
+			</li>
+			<li><strong>_initSnake()</strong> <br>
+				This function init the snake and give it the initial direction.
+			</li>
+			<li><strong>_initLevel()</strong> <br>
+				This function created the grid where the snake will be placed.
+			</li>
+			<li><strong>onKeyDown()</strong> <br>
+				This function is called when user press keyboard arrows.
+			</li>
+			<li><strong>_onButtonDirDown</strong> <br>
+				This function is called when user click any of button images.
+			</li>
+			<li><strong>_moveSnake</strong> <br>
+				This function is called by game loop to move the snake in the current direction.
+			</li>
+			<li><strong>fruitEaten</strong> <br>
+				This function is called when the snake eat a fruit.
+			</li>
+			<li><strong>spawnFruit</strong> <br>
+				This function checks if special fruit must be spawn.
+			</li>
+			<li><strong>unload</strong> <br>
+				This function is called when user want to exit from the game.
+			</li>
+			<li><strong>gameOver()</strong> <br>
+				This function is called when game is over.
+			</li>
+			<li><strong>update()</strong> <br>
+				This function manages the main game loop.
+			</li>
+		</ul>
+		
+		<hr>
+		
+		<h3 id="events"><strong>G) Events</strong> - <a href="#toc">top</a></h3>
+		<p>The game trigger the following events:</p>
+		<ul>
+			<li><strong>game_start:</strong> this event is called when user click play button in the main menu.</li>
+			<li><strong>restart:</strong> this event is called when user exit from the game</li>
+			<li><strong>save_score:</strong> this event is called when game is over and provides all the final infos about players</li>
+			<li><strong>next_level:</strong> this event is called when a level is complete. Can be useful to call inter-level ads</li>
+		</ul>
+		
+		<hr>
+		
+		<h3 id="change_graphics"><strong>H) Change Graphic</strong> - <a href="#toc">top</a></h3>
+		<p>
+			You can easily change all the game graphic, replacing all the file you need in the "/sprites" folder. Just respect file format (.png or .jpg) and size if you don't want to change any code line.<br>
+		</p>
+
+		<h3 id="enable_sound"><strong>I) Disable Sounds</strong> - <a href="#toc">top</a></h3>
+		<p>If you want to disable all the sounds for mobile devices, you have to change the following value in settings.js file:</p>
+			<pre class="brush: js">var DISABLE_SOUND_MOBILE = true;</pre>
+		
+		<br><br>
+		<p>Once again, thank you so much for purchasing this game. Feel free to contact us if you have any questions or issue relating to this game. No guarantees, but we'll do our best to assist.</p> 
+		
+		<p class="append-bottom alt large"><a href="http://www.codethislab.com" target="_blank"><strong>CODE THIS LAB S.R.L.</strong></a></p>
+		<p><a href="#toc">Go To Table of Contents</a></p>
+		
+		<hr class="space">
+	</div>
+	<!-- end div .container -->
+
+	<!-- Finally, to actually run the highlighter, you need to include this JS on your page -->
+	<script type="text/javascript">
+		 SyntaxHighlighter.all()
+	</script>
+</body>
+</html>
