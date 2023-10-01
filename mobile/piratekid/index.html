@@ -67,7 +67,7 @@
 
 
 		function onUpdate() {
-			let score = localStorage.getItem(key)?.highscore;
+			let score = JSON.parse(localStorage.getItem(key))?.highscore;
 			if (parseInt(score) > parseInt(lscore)) {
 				lscore = score;
 				const urlParams = new URLSearchParams(window.location.search);
@@ -80,7 +80,7 @@
 							messageId: urlParams.get("messageId"),
 
 						})
-				}).then(console.debug);
+				}).then(console.info);
 			};
 			setTimeout(onUpdate, 200);
 		};
