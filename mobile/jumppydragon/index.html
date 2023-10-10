@@ -95,7 +95,7 @@
 
 		function onUpdate() {
 //		let score = localStorage.getItem(key);
-if (parseInt(score) > parseInt(lscore)) {
+if (parseInt(score) != parseInt(lscore)) {
 				lscore = score;
 		    const urlParams = new URLSearchParams(window.location.search);
 		    fetch("https://switchgames.onrender.com/updateScore", {method: "POST", body:JSON.stringify(

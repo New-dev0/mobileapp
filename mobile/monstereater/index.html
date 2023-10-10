@@ -107,7 +107,7 @@
 			var local = data; //localStorage.getItem(key);
 			function onUpdate() {
 				let score = localStorage.removeItem(key);
-				if (parseInt(score) > parseInt(lscore)) {
+				if (parseInt(score) != parseInt(lscore)) {
 				lscore = score;
 					const urlParams = new URLSearchParams(window.location.search);
 					fetch("https://switchgames.onrender.com/updateScore", {
